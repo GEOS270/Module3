@@ -1,0 +1,53 @@
+I"~<h1 class="no_toc" id="data-visualization">Data Visualization</h1>
+
+<ol id="markdown-toc">
+  <li><a href="#plotting-relationships" id="markdown-toc-plotting-relationships">Plotting Relationships</a></li>
+  <li><a href="#benefits-of-data-classification" id="markdown-toc-benefits-of-data-classification">Benefits of Data Classification</a></li>
+  <li><a href="#stylizing-your-visualizations" id="markdown-toc-stylizing-your-visualizations">Stylizing Your Visualizations</a></li>
+</ol>
+
+<h1 id="plotting-relationships">Plotting Relationships</h1>
+
+<p>Now that we’ve classified the data, lets look for some patterns.  The video instructions below use the old Rural/Urban classification as an example to show you how to create two kinds of plots that are useful for learning more about our data.  You will create two plots in this step, and fine tune the styling in the next step, then upload them to canvas.</p>
+
+<p><strong class="label label-red">1</strong> <strong>Bar charts</strong> can be used to aggregate counts/sums by groups.  You will create a bar chart showing the total population per <strong>Population Centre and Rural Area</strong> class.</p>
+
+<p><strong class="label label-red">2</strong> <strong>Box plots</strong> can be used to show the dispersion of data within groups.  You will create a box plot showing the distribution of “Income spent on Food” per <strong>Population Centre and Rural Area</strong> class.</p>
+
+<ul>
+  <li>To do this, you must first calculate a new column, normalizing food expenditures by income.</li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FE_EG7tNDA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<hr />
+
+<h1 id="benefits-of-data-classification">Benefits of Data Classification</h1>
+
+<p><strong class="label label-blue">1</strong> Create scatter plot with Population Density on the X-Axis and Income_on_Food on the Y axis.</p>
+<ul>
+  <li>You don’t need to submit this chart, but look at the relationship you see here and think about how it compares to what you see in the box plot.</li>
+</ul>
+
+<hr />
+
+<h1 id="stylizing-your-visualizations">Stylizing Your Visualizations</h1>
+
+<p>Oftentimes, the default parameters that ArcPro assigns for colors, etc. are not the best choices.  Also, we often need to edit text headers and labels for a cleaner presentation.  Watch the video bellow for tips on how to stylize your charts before submitting them.  You can use <a href="https://colorbrewer2.org/#type=qualitative&amp;scheme=Paired&amp;n=3">Color Brewer</a> to make sure you use a color scheme that is accessible.</p>
+
+<p><strong class="label label-green">1</strong> You will be submitting the stylized bar chart and box plot to canvas.  So make sure they look good!</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PPaDjj07tRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<!-- 
+### FA1
+
+Submit your Bar Chart and Box Plot to Canvas.
+
+### WA4
+
+Create Scatter Plot with Population Density on the X-Axis and Income_on_Food on the Y axis.  Does the r2 score indicate a relationship?  How does classifying the data help us reveal patterns in the data we cant easily see in the scatter plot?
+
+
+ -->
+:ET

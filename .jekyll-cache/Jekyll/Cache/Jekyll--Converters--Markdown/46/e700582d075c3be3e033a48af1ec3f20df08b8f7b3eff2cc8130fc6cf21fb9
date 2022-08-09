@@ -1,0 +1,331 @@
+I"K1<h1 id="assessment">Assessment</h1>
+
+<p>You can use the submit your answers to the Assessment via the Module 2 Quiz on Canvas.  Questions are listed here with hyperlinks to the relevant section of the module if you need help finding answers.  If you would like a .pdf version of the instructions, you can it download it <a href="https://raw.githubusercontent.com/June-Skeeter/Module2_GEOS270/main/docs/Assessment.pdf">here</a>.</p>
+
+<h2 id="written-answers--file-uploads">Written Answers &amp; File Uploads</h2>
+
+<p>Written answers should be brief but they should adequately answer the question.  Bullet point format is sufficient unless otherwise specified.  All written answers &amp; charts will be evaluated following this general rubrics below.</p>
+
+<ul>
+  <li>Scores &amp; categories are general guides, you TA may assign scores between these levels</li>
+  <li>Your TA will provide brief comments where applicable, if you need more feedback you can follow up with your TA.</li>
+</ul>
+
+<p><strong>Written Answer Rubric</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Category</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0%</td>
+      <td>Missing</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>40%</td>
+      <td>Insufficient</td>
+      <td>Minimal effort, missing major key points, or serious logical flaws</td>
+    </tr>
+    <tr>
+      <td>60%</td>
+      <td>Below Expectations</td>
+      <td>Missing a few key points or minor logical flaws</td>
+    </tr>
+    <tr>
+      <td>80%</td>
+      <td>Met Expectations</td>
+      <td>Hits key points and mostly well constructed</td>
+    </tr>
+    <tr>
+      <td>100%</td>
+      <td>Exceeds Expectations</td>
+      <td>Clearly thought out, concise, and astute</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Charts Rubric</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Category</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0%</td>
+      <td>Missing</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>40%</td>
+      <td>Insufficient</td>
+      <td>Serious errors in analysis, missing data, or major stylistic issues</td>
+    </tr>
+    <tr>
+      <td>60%</td>
+      <td>Below Expectations</td>
+      <td>Minor errors in analysis or multiple stylistic issues</td>
+    </tr>
+    <tr>
+      <td>80%</td>
+      <td>Met Expectations</td>
+      <td>Error free analysis, minor stylistic issue</td>
+    </tr>
+    <tr>
+      <td>100%</td>
+      <td>Exceeds Expectations</td>
+      <td>Error free analysis and clean, aesthetically pleasing map/chart</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="module-quiz-30pts">Module Quiz (30pts)</h1>
+
+<p>All quiz answers are multiple choice, numeric input, fill in the blank, etc. type questions.  They can be submitted via the Module 1 Quiz that can be found on the Canvas page.  You will have unlimited attempts to take the quiz.</p>
+
+<h2 id="content">Content</h2>
+
+<h3 id="qc1"><a href="Content_Part1.md#qc1">QC1</a></h3>
+<p>It is important to avoid using sequential color pallets or graduated symbols for _____ data because they can imply a ranking/direction, even though this type of data has no rank/direction.</p>
+
+<p>Correct:  <strong>Nominal</strong>
+Half Pts:  Qualitative, Categorical</p>
+
+<h3 id="qc2"><a href="Content_Part1.md#qc2">QC2</a></h3>
+<p>Diverging color maps are great for showing deviations from a mean value. [T/F]</p>
+
+<p>Correct:  <strong>True</strong></p>
+
+<h3 id="qc3"><a href="Content_Part1.md#qc3">QC3</a></h3>
+<p>Sequential color maps use gradations of different shades (light/dark) of the same color. [T/F]</p>
+
+<p>Correct:  <strong>True</strong></p>
+
+<h3 id="qc4"><a href="Content_Part1.md#qc4">QC4</a></h3>
+<p>The best maps can be interpreted quickly and easily [T/F]</p>
+
+<p>Correct:  <strong>True</strong></p>
+
+<h3 id="qc5"><a href="Content_Part1.md#qc5">QC5</a></h3>
+<p>You always want to put as much information on a map as possible, even if it will overwhelm the map reader! [T/F]</p>
+
+<p>Correct:  <strong>False</strong></p>
+
+<h3 id="qc6"><a href="Content_Part1.md#qc6">QC6</a></h3>
+<p>Every map should always have a north arrow. [T/F]</p>
+
+<p>Correct:  <strong>False</strong></p>
+
+<h3 id="qc7"><a href="Content_Part1.md#qc7">QC7</a></h3>
+<p>This type of colorblindness impacts ~ 4.5% of the human population.</p>
+
+<ul>
+  <li>Red-Green</li>
+  <li>Blue-Green</li>
+  <li>Red-Blue</li>
+  <li>Full Spectrum</li>
+</ul>
+
+<p>Correct:  <strong>Red-Green</strong></p>
+
+<h3 id="qc8"><a href="Content_Part2.md#qc8">QC8</a></h3>
+<p>Supervised classification methods area always better than unsupervised because humans are smarter than computers. [T/F]</p>
+
+<p>Correct:  <strong>False</strong></p>
+
+<h3 id="qc9"><a href="Content_Part2.md#qc9">QC9</a></h3>
+<p>The natural breaks algorithm is a(n) <strong>__</strong>_ classification method that seeks to <strong>__</strong>_ similarity within classes and <strong>__</strong>_ dissimilarity between classes.</p>
+
+<p><strong>0</strong>
+Correct:  <strong>unsupervised</strong>
+Half Pts:  Jenks</p>
+
+<p><strong>1</strong>
+Correct:  <strong>maximize</strong>
+Half Pts:  maximize group</p>
+
+<p><strong>2</strong>
+Correct:  <strong>maximize</strong>
+Half Pts:  maximize group</p>
+
+<h3 id="qc10"><a href="Content_Part2.md#qc10">QC10</a></h3>
+<p>Classification and regression trees (CART) are a <strong>__</strong>_ classification method that requires a user to provide <strong>__</strong>_ data.</p>
+
+<p><strong>0</strong>
+Correct:  <strong>supervised, user defined</strong>
+Half Pts:</p>
+
+<p><strong>1</strong>
+Correct:  <strong>training, defined category, a set of classes as training</strong>
+Half Pts:</p>
+
+<h3 id="qc11"><a href="Content_Part2.md#qc11">QC11</a></h3>
+<p>Unsupervised classification methods require no input from the user, the computer does all the work!! [T/F]</p>
+
+<p>Correct:  <strong>False</strong></p>
+
+<hr />
+
+<h2 id="application">Application</h2>
+
+<h3 id="qa1"><a href="Application_Part1.md#qa1">QA1</a></h3>
+<p>Simply Analytics allows you to download data about businesses locations. [T/F]</p>
+
+<p>Correct:  <strong>True</strong></p>
+
+<h3 id="qa2"><a href="Application_Part1.md#qa2">QA2</a></h3>
+<p>We used the clip tool to ensure we don’t  <em>__</em> population density in the coastal Subdivisions.</p>
+
+<p>Correct:  <strong>underestimate, miscalculate, wrongly calculate, underrepresent, underrepresented, misrepresent</strong>
+Half Pts:  decrease, distort</p>
+
+<h3 id="qa3"><a href="Application_Part2.md#qa3">QA3</a></h3>
+<p>The Select by Attribute tool lets us use SQL (Structured Query Language) to define expressions for querying vector data. [T/F]</p>
+
+<p>Correct:  <strong>True</strong></p>
+
+<h3 id="qa4"><a href="Application_Part3.md#qa4">QA4</a></h3>
+<p>Box plots are most useful for looking at counts [T/F]</p>
+
+<p>Correct:  <strong>False</strong></p>
+
+<h3 id="qa5"><a href="Application_Part3.md#qa5">QA5</a></h3>
+<p>In which Population Centre and Rural Area class does the the largest proportion of BC’s population live?</p>
+
+<ul>
+  <li>Large Urban Population Centre</li>
+  <li>Rural</li>
+  <li>Small Population Centre</li>
+  <li>Medium Population Centre</li>
+</ul>
+
+<p>Correct:  <strong>Large Urban Population Centre</strong></p>
+
+<h3 id="qa6"><a href="Application_Part3.md#qa6">QA6</a></h3>
+<p>What proportion of BC’s overall population lives in Rural Areas?   (Round to the nearest tenth)  <em>Hint</em> Sum the four classes to get the total population.</p>
+
+<p>29.0
+Correct:  <strong>28.9 - 29.1</strong>
+Half Pts:  <strong>28.8 - 29.2</strong></p>
+
+<h3 id="qa7"><a href="Application_Part3.md#qa7">QA7</a></h3>
+<p>What is the median percentage of their income people in Rural areas spend on food?  (Round to the nearest tenth)</p>
+
+<p>17.2
+Correct:  <strong>17.1 - 17.3</strong>
+Half Pts:  <strong>17.0 - 17.4</strong></p>
+
+<hr />
+
+<h1 id="module-assignment-70-pts">Module Assignment (70 pts)</h1>
+
+<p>All written answers should be numbered and record in one document, saved as a .pdf, and uploaded to canvas.  The file submissions should also be saved as .pdf and uploaded as a separate document.  <strong>Written answers can be as brief as you want as long as they answer the question.</strong></p>
+
+<h2 id="content-1">Content</h2>
+
+<h3 id="wc1---10-pts"><a href="Content_Part2.md#qc1">WC1</a> - 10 pts</h3>
+<p>Briefly, explain the differences between Supervised and Unsupervised classification methods.</p>
+
+<ul>
+  <li>
+    <p>With supervised classification, the user either explicitly defines the class boundaries, or provides a training dataset with defined classes and has the system learn the boundaries.  When we define the classes, sometimes were at risk for inducing our own bias.</p>
+  </li>
+  <li>
+    <p>With unsupervised classification, the user <em>generally</em> picks the number of classes (some advanced methods can do this this part too, but I don’t expect them to mention that) and then the system defines the classes from there. - Not truly “unsupervised” because its not like the computer just spontaneously classifies things, we have to initiate and guide the process.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="application-1">Application</h2>
+
+<h3 id="wa1---10pts"><a href="Application_Part1.md#wa1">WA1</a> - 10pts</h3>
+<p>Do you think this kind of information (locations of restaurants, groceries, etc.) might be helpful when studying the cost of food in a region?</p>
+
+<ul>
+  <li>I’m looking for them to say something involving critical thought - ie. proximity to groceries (&gt;travel distance = &gt;cost$), &gt;#groceries = &gt;choice, etc.</li>
+</ul>
+
+<h3 id="wa2---10pts"><a href="Application_Part1.md#wa2">WA2</a> - 10pts</h3>
+<p>Which projection did are choose for the feature dataset?  Why did I choose this projection?</p>
+
+<p>-BC Albers Equal Area - Equal Area because we’re calculating <strong>Population Dentistry</strong>, BC Albers because its specific to BC</p>
+
+<h3 id="wa3---10pts"><a href="Application_Part2.md#wa3">WA3</a> - 10pts</h3>
+<p>Skim the Introduction of the <a href="https://www.statcan.gc.ca/eng/subjects/standard/pcrac/2016/introduction">Documentation</a> explaining the classification scheme.  What was the reasoning behind updating from the old Rural/Urban method?</p>
+
+<ul>
+  <li>The old urban class treated a small town of 1000 the same as a city of 1,000,000 - they needed a finer resolution classification because 2 groups was insufficient to distinguish given the scale of difference.</li>
+</ul>
+
+<h3 id="wa4---10pts"><a href="Application_Part3.md#wa4">WA4</a> - 10pts</h3>
+<p>Create Scatter Plot with Population Density on the X-Axis and Income_on_Food on the Y axis.  Does the r2 score indicate a relationship?  How does classifying the data help us reveal patterns in the data we cant easily see in the scatter plot?</p>
+
+<ul>
+  <li>The scatterplot does not show a strong relationshp.  Classifiying the highlights the relationship better, by specifically grouping census subdivisions using two factors: total population <strong>and</strong> population density.  It allows us to see that cities have a close spread in the same range.  It also shows that while not all rurlal area are impacted by food affordability issues, all of the worst affected areas <strong>are</strong> rural.</li>
+</ul>
+
+<hr />
+
+<h2 id="file-submissions">File Submissions</h2>
+
+<h3 id="fa1---10pts-each-20pts-total"><a href="Application_Part3.md#fa1">FA1</a> - 10pts each (20pts total)</h3>
+<p>Submit your Bar Chart and Box Plot to Canvas.</p>
+
+<ul>
+  <li>
+    <p>Must use colorscheme that is red-green colorblind friendly <a href="https://youtu.be/3Kf0Ng3ZVBs?t=687">see this video for reference on what I’ve told them</a> <strong>&amp;</strong> suitable for qualitative data (not a sequential colormap)</p>
+  </li>
+  <li>
+    <p>Should have meaningful concise labels (edit out underscores, etc.) &amp; generally be aesthetically pleasing.</p>
+  </li>
+</ul>
+
+<h1 id="rubric">Rubric</h1>
+
+<p>All written answers and file submissions will be scored using this generic rubric.  Your TA will provide brief comments where applicable.  For more feedback you can follow up with your TA.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0%</td>
+      <td>Missing</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>Insufficient</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>Below Expectations</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>Met Expectations</td>
+    </tr>
+    <tr>
+      <td>100%</td>
+      <td>Exceeds Expectations</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

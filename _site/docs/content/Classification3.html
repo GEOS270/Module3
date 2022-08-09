@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css">
+  <!-- see https://cdnjs.com/libraries/reveal.js/3.6.0 for what's available -->
+  <!-- examples: simple, beige, black, blood, league, moon, night, serif, sky, solarized, white ... -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/serif.css" id="theme">
+  <!-- see: https://cdnjs.com/libraries/highlight.js/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/ir-black.min.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    // Load print, pdf stylesheets from jsDelivr
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+
+  <!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <style>
+    body {
+      /* make it totally black */
+      /*background-color: black;*/
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .col {
+      flex: 1
+    }
+
+
+.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+ul {
+  padding-left: 5px;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+
+       <section>
+        <h1>Data Classification</h1>
+        <div class="container" style="text-align:center;">
+          <p>Finding patterns in complex datasets to emphasizing the aspects we think are important.</p>
+      </section>
+
+
+    <section>
+      <h2>Histograms</h2>
+      <div class="container">
+        <div class="col" style="text-align: left;">
+          <p>A useful tool to inspect data
+            <ul>
+              <li>Orders data and bins by intervals</li>
+              <li>Helpful for classifying data</li>
+              <li>Outlier detection</li>
+                <ul>
+                  <li>Values separated by from the rest of the data</li>
+                </ul>
+            </ul></p>
+        </div>
+        <div class="col" style="text-align: right;">
+          <img src='images/histogram.png'>
+        </div>
+      </div>
+    </section>
+
+     <section>
+      <h2>Descriptive Statistics</h2>
+        <div class="container">
+          <div class="left">
+            <p>When classifying data, descriptive statistics can be used to inform the choice of classification.
+              <ul>
+                <li>They are also frequently used <b>by</b> the classification methods.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="right" style="font-size:50%">
+            <table>
+              <tr>
+                  <td><b>Operation</b></td><td><b>Nominal</b></td><td><b>Ordinal</b></td><td><b>Interval</b></td><td><b>Ratio</b></td>
+              </tr>
+              <tr>
+                  <td>Equality</td><td>x</td><td>x</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Counts/Mode</td><td>x</td><td>x</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Rank/Order</td><td></td><td>x</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Median</td><td></td><td>~</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Add/Subtract</td><td></td><td></td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Mean</td><td></td><td></td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Multiply/Divide</td><td></td><td></td><td></td><td>x</td>
+              </tr>
+          </table>
+            
+          </div>
+        </div>
+    </section>
+
+     <section>
+      <h2>Central Tendency</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+            <p>Highlight the central feature in a dataset. 
+            <ul>
+              <li><b>Mode</b>: Most frequent value in a set</li>
+              <li><b>Median</b>: Middle value in a set
+                <ul>
+                  <li>Not impacted by outliers - median income</li>
+                </ul>
+                </li>
+              <li><b>Mean</b>: Sum divided by count
+                <ul>
+                  <li>Impacted by outliers - mean cost of food</li>
+                </ul>
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+     <section>
+      <h2>Measures of Dispersion</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+            <p>Give context to measures of central tendency. 
+            <ul>
+              <li><b>Range</b>: Difference between maximum and minimum</li>
+              <li><b>Interquartile Range</b>: Spread around the median
+                <ul>
+                  <li>Difference between 75th and 25th percentile value - not influenced by outliers</li>
+                </ul>
+                </li>
+              <li><b>Standard Deviation</b>: Measure of spread around the mean
+                <ul>
+                  <li>$\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^n x_i - \overline{X}}$ - influenced by outliers</li>
+                </ul>
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+       <section>
+        <h2>Frequency Distribution</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Most useful for <b>categorical</b> data.
+          </p>
+          <ul>
+            <li>Counts per class</li>
+            <li>Applicable to <b>discrete</b> numeric too</li>
+          </ul>
+         </div>
+          <div class="col" style="text-align: right;">
+            <img src='images/Frequency_Dist.svg'>
+          </div>
+       </div>
+      </section>
+
+       <section>
+        <h2>Probability Distribution</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Probability of occurrence based on in a <b>quantitative</b> dataset.</p>
+          <ul>
+            <li><b>Normal Distribution</b>: idealized, based on distance from the mean in <b>standard deviations</b>.</li>
+            <ul>
+            <li>It can be helpful in outlier detection</li>
+              <li>Base assumption of many statistical tests</li>
+            </ul>
+          </ul>
+         </div>
+          <div class="col" style="text-align: center;">
+            <p> </p>
+            <img src='images/normal_dist.svg'>
+          </div>
+       </div>
+      </section>
+
+
+       <section>
+        <h2>Deviating from the Norm</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Data rarely fits a normal distribution perfectly:</p>
+            <ul>
+              <li>Near Normal - Income on food</li>
+              <li class="fragment fade-in">Skewed Normal - Income on food</li>
+              <li class="fragment fade-in">Skewed - Population counts</li>
+              <li class="fragment fade-in">Multimodal - Peak Restaurant Hours</li>
+            </ul>
+          </ul>
+         </div>
+          <div class="col" style="text-align: right;">
+            <div class="r-stack">
+            <img class="fragment" src='images/normal_dist.png' width="500" height="300">
+            <img class="fragment" src='images/normal_dist2.png' width="500" height="300">
+          </div>
+          </div>
+       </div>
+      </section>
+
+       <section>
+        <h2>Scaling Data</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Often helpful to scale or aggregate a value by a unit of another value - time, area, population etc.</p>
+            <ul>
+            <li>Example: <a href="https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html?stat=num&measure=total_last14&map=pt#a2" target="_blank">Canada COVID Portal</a></li>
+            <ul>
+            <li>Total cases aren't useful when comparing vastly different populations</li>
+            <li>Time rates (rolling 14 day averages) can be smooth out variability.</li>
+            </ul>
+          </ul>
+         </div>
+       </div>
+      </section>
+
+
+       <section>
+        <h2>Normalizing Data</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Allows us to account for variables that mask or hide patterns in our data.  Confounding variables can be:</p>
+          <ul>
+            <li><b>Highly correlated</b>, eg. income and food cost.<br><br><br></li>
+          </ul>
+         </div>
+         <div class="col" style="text-align:right;">
+           <img src='images/confounder_1.png'>
+         </div>
+       </div>
+      </section>
+
+
+
+       <section>
+        <h2>Normalizing Data</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Allows us to account for variables that mask or hide patterns in our data.  Confounding variables can be:</p>
+          <ul>
+            <li><b>Highly correlated</b>, eg. income and food cost.</li>
+            <li><b>Exhibit no correlation</b>, eg. population and shape area.</li>
+          </ul>
+         </div>
+         <div class="col" style="text-align:right;">
+           <img src='images/confounder_2.png'>
+         </div>
+       </div>
+      </section>
+
+
+       <section>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <h3>Multiple Factors</h3>
+          <p>It isn't always straightforward to include multiple confounding variables.  For example: COVID rates by age groups.</p>
+          <ol>
+            <li>Population by age group</li>
+            <li>Workforce participation</li>
+            <li>Occupational exposure</li>
+          </ol>
+         </div>
+         <div class="col" style="text-align:right;">
+            <img src='images/horgan.jpg' width = "300">
+            <img src='images/multiple_confounders.png' width = "300">
+         </div>
+       </div>
+      </section>
+
+       <section>
+        <h2>Classification Methods</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p><b>Supervised</b>: 
+            <ul>
+              <li>User defined or informed classes</li>
+            </ul>
+          </p>
+          <p><b>Unsupervised</b>:  
+            <ul>
+              <li>Data defined classes - minimal user input</li>
+            </ul>
+          </p>
+         </div>
+      </section>
+
+<!-- 
+Before we cover these methods, we need to talk a bit about statistics and data manipulation. -->
+
+
+
+    </div><!-- .slides -->
+
+  </div><!-- .reveal -->
+
+  <!-- not needed since 3.8.0 -->
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/head.min.js"><script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.04,
+      width: 1200,
+
+
+      transition: 'none', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins, loaded from jsDelivr
+      dependencies: [
+        { src: srcUrlPrefix + 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+        { src: srcUrlPrefix + 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: srcUrlPrefix + 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: srcUrlPrefix + 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: srcUrlPrefix + 'plugin/zoom-js/zoom.js', async: true },
+        { src: srcUrlPrefix + 'plugin/notes/notes.js', async: true },
+        { src: srcUrlPrefix + '/plugin/math/math.js', async: true }
+      ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
