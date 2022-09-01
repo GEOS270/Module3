@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Assessment
+title: Module Quiz
 nav_order: 4
 ---
 

@@ -1,30 +1,20 @@
 ---
 layout: default
-title: Data Visualization
-parent: Lecture Content
-has_children: True
+title: Data Classification
+parent: Data Classification and Visualization
+# has_children: True
 nav_order: 2
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
+# Data Classification
 
-# Data Visualization
-
-It is important to display your results in an clean, transparent, and accessible way.
-
+In order to visualize and share our data effectively, we usually have to simplify it first.  For this, we rely on a number of different data classification methods.
 
 
 <div style="overflow: hidden;
   padding-top: 56.25%;
   position: relative">
-  <iframe src="content/Visualization.html" title="Processes" scrolling="no" frameborder="0"
+  <iframe src="content/Classification.html" title="Processes" scrolling="no" frameborder="0"
     style="border: 0;
    height: 100%;
    left: 0;
@@ -34,23 +24,5 @@ It is important to display your results in an clean, transparent, and accessible
    <p>Your browser does not support iframes.</p>
  </iframe>
 </div>
-<a href="content/Visualization.html" target="_blank">View Slides in New Tab</a>
+<a href="content/Classification.html" target="_blank">View Slides in New Tab</a>
 
-
-Download the slides as a .pdf [here](https://raw.githubusercontent.com/June-Skeeter/Module3_GEOS270/main/docs/content/Visualization.pdf)
-
----
-
-# Old Videos
-
-You can watch these resources for a quick summary/overview.
-
-## Symbology and Color
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3Kf0Ng3ZVBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-
-## Cartography Tips
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UecvTwUGtCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

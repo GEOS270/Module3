@@ -1,30 +1,21 @@
 ---
 layout: default
-title: Data Classification
-parent: Lecture Content
+title: Phenomena and Data Types
+parent: Data Classification and Visualization
 has_children: True
 nav_order: 1
 ---
 
-# Data Classification
-
-In order to visualize and share our data effectively, we usually have to simplify it first.  For this, we rely on a number of different data classification methods.
 
 
-<div style="overflow: hidden;
-  padding-top: 56.25%;
-  position: relative">
-  <iframe src="content/Classification.html" title="Processes" scrolling="no" frameborder="0"
-    style="border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;">
-   <p>Your browser does not support iframes.</p>
- </iframe>
-</div>
-<a href="content/Classification.html" target="_blank">View Slides in New Tab</a>
+# A Bit About Data
 
+Before we think about how we represent data in a GIS specifically, we need to take a step back and think about what data is?
 
-Download the slides as a .pdf [here](https://raw.githubusercontent.com/June-Skeeter/Module3_GEOS270/main/docs/content/Classification.pdf)
+* Data is information describing some phenomenon.
+
+* The **type of phenomenon** being represented will often influence *how* we represent it.
+
+* There are different types of data too.  Some is numeric, some is purely descriptive.  Different types of data have different rules we must consider when working with them.
+
+* Spatial data is special!  There are unique considerations we need to make.

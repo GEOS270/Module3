@@ -1,12 +1,26 @@
 ---
 layout: default
-title: Module 2
+title: Data Classification and Visualization
+has_children: True
 nav_order: 1
 ---
 
+# Data Classification and Visualization
+
+<!-- Now that we've covered the types of data and data models.  We're going to cover how we display data in clean and effective ways.
+
+
 # Data Visualization and Classification
 
-Now that we've covered the types of data and data models.  We're going to cover how we display data in clean and effective ways.
+Data classification and visualization are important because:
+
+**1**{: .label .label-blue } We use classification methods find patterns in a dataset.
+* On their own, many datasets are to complex to interpret directly.  We often need to simplify our data by aggregating it into classes (groups).
+* This helps us find patterns in our data **and** helps us convey those patterns to others.
+
+**2**{: .label .label-blue } Data visualization is essential for conveying our results to others effectively.
+* Your analysis is meaningless if you are the only one who understands it.
+* We have to be able to share our analyses with others in a concise and organized way.
 
 ## Learning Outcomes
 
@@ -28,7 +42,4 @@ Now that we've covered the types of data and data models.  We're going to cover 
 * Use Simply Analytics to download Canadian census data
 * Apply different data classification methods
 * Practice creating effective visualizations
-
-# Deliverables
-
-Every module will be scored out of 100 pts.  For this module will be be submitting one map and a some written responses.  You will also be taking a quiz consisting of multiple choice, numeric input, fill in the blank, etc. type questions.  See the [assessment page](docs/Assessment.md).
+ -->
