@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
 
+  <!-- <meta charset="utf-8"> -->
+
   <title>Reveal.js template</title>
   <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
 
@@ -13,20 +15,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css">
-  <!-- see https://cdnjs.com/libraries/reveal.js/3.6.0 for what's available -->
-  <!-- examples: simple, beige, black, blood, league, moon, night, serif, sky, solarized, white ... -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/sky.css" id="theme">
-  <!-- see: https://cdnjs.com/libraries/highlight.js/ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
 
   <!-- Printing and PDF exports -->
   <script>
     // Load print, pdf stylesheets from jsDelivr
-    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/';
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/';
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
@@ -35,40 +32,164 @@
   </script>
 
   <!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
     <![endif]-->
   <style>
-    body {
-      /* make it totally black */
-      /*background-color: black;*/
-      background-color: #c5f5fa;
-    }
+    
+.container {
+  position: fixed;
+    height: 700px;
+    width: 100%;
+}
 
-    .container {
-      display: flex;
-    }
+.title{
+  position: relative;
+  top: 5%;
+}
 
-    .col {
-      flex: 1
-    }
+.subtitle{
+  position: relative;
+  top: 10%;
+}
 
+.question{
+  position: relative;
+  text-align: left;
+  top: 10%;
+}
+
+
+.header {
+  top: 1%;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+}
+
+.full {
+  width: 95%;
+  top:  12%;
+  left: 0%;
+  text-align: left;
+  position: absolute; 
+}
 
 .left {
-  left:-8.33%;
+  width: 49%;
+  height: 80%;
+  top: 12%;
+  left: 0%;
+  position: absolute;
   text-align: left;
-  float: left;
-  width:40%;
-  z-index:-10;
 }
 
 .right {
-  left:31.25%;
-  top: 75px;
-  float: right;
-  text-align: right;
-  z-index:-10;
-  width:60%;
+  width: 49%;
+  top: 12%;
+  height: 80%;
+  left: 51%;
+  position: absolute;
+  text-align: left;
 }
+
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.figure {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+
+.subfigure {
+  width: 100%;
+  /* height: 100%; */
+  left: 0%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+h1 {
+  display: block;
+  font-size: 3em !important; 
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+  
+h2 {
+  display: block;
+  font-size: 1.5em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.reveal a {
+  color: blue;
+}
+
+.reveal {
+  background-color: #e6f9fc;
+}
+
+ul {
+    padding-left: 0;
+    font-size: 90%;
+
+} 
+
+ol {
+  counter-reset: item;
+  font-size: 90%;
+  padding-left: 0;
+}
+
+li.nl {
+  display: block;
+}
+
+li.nl:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+ol ol li.nl::before {
+    content: counters(item, ".") " ";
+}
+
+#main img {
+    float: left;
+}
+
+.col {
+    flex: 1
+}
+
 
   </style>
 </head>
@@ -78,344 +199,719 @@
   <div class="reveal">
 
     <div class="slides">
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="col" style="text-align: center;">
-          <p><img src="images/phenomenon.png" width="1000"></p>
-           </div>
-      </section>
-
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A lightning strike</p>
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/lightning.jpg" height ="500"></p>
-          </div>
-      </section>
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A Country</p>
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/03-vector.png" width ="500"></p>
-          </div>
-      </section>
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A Coastline</p>
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/beach.jpg" width ="500"></p>
-          </div>
-      </section>
-
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A dog on a kayak!</p>
-
-            <li class="fragment">Anything and everything are phenomena!</li>
-          <!-- <p>Anything and everything are phenomena!</p> -->
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/dog_on_a_boat.jpg" width="1000"></p>
-          </div>
-      </section>
-
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <!-- <p><br></p> -->
-          <p><b>Discrete Objects</b></p>
-        </div>
-        <div class="col" style="text-align: Left;">
-          <p><b>Continuous Fields</b></p>
-        </div>
-          </div>
-      </section>
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-          <p><b>Discrete Objects</b></p>
-          <ul>
-            <li>Distinct boundaries - can be exactly measured</li>
-            <li>Finite - countable</li>
-          </ul>
-        </div>
-        <div class="col" style="text-align: Left;">
-          <p><b>Continuous Fields</b></p>
-          <ul>
-            <li>No distinct boundaries - everywhere has a value</li>
-            <li>Infinitely divisible - not countable</li>
-          </ul>
-            <!-- <p>-Strong (positive) spatial autocorrelation</p> -->
-        </div>
-          </div>
-      </section>
-
-<!-- 
-       <section>
-        <h3>Spatial Autocorrelation</h3>
-        <div class="container">
-          <div class="col" style="text-align: Center;">
-          <p><img src="images/03-autocorrelation.png" width="800"></p>
-          <p>The measure of similarity between objects across space.  It allows us to make some a key assumptions when representing spatial data.</p>
-           </div>
-      </section> -->
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p><br></p>
-          <p>When is a phenomenon <b>discrete</b> or <b>continuous</b>?</p>
-          <ul>
-            <li>To an extent, it depends on our <i>perspective</i> and the <i>scale</i> of our analysis.</li>
-            <li>Many phenomenon are a bit of both.</li>
-          </ul>
-        </div>
-          </div>
-      </section>
-
-
-       <section style="text-align: left;">
-        <h3>Lightning</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <li>A <b>strike</b> is a discrete object</li>
-            <li class="fragment">A lighting bolt ...? </li>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/lightning.jpg" height ="500"></p>
-          </div>
-        </div>
-      </section>
-
-       <section style="text-align: left;">
-        <h3>Lightning</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-            <li>A <b>strike</b> is a discrete object</li>
-            <li>A lighting bolt ...? </li>
-            <li>Strike <b>frequency</b> is a continuous field</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/03-lightning-density.gif" height ="500"></p>
-          </div>
-        </div>
-      </section>
-
-
-       <section style="text-align: left;">
-        <h3>Coastline</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-              <li>Continuous field at <b>large scale</b></li>
-            <p><br></p>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/beach.jpg" width ="500"></p>
-          </div>
-        </div>
-      </section>
-
-       <section style="text-align: left;">
-        <h3>Coastline</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-              <li>Continuous field at <b>large scale</b></li>
-              <li>Discrete object at <b>small scale</b></li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/beach_small_scale.png" widht ="500"></p>
-          </div>
-        </div>
-      </section>
-
-       <section style="text-align: left;">
-        <h3>Coastline</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-              <li>Continuous field at <b>large scale</b></li>
-              <li>Discrete object at <b>small scale</b></li>
-              <li>Unless you change the <a href="https://coastal.climatecentral.org/"><i>time scale</i></a></li>
-            </ul>
-
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/sea_level_rise.png" widht ="500"></p>
-          </div>
-        </div>
-      </section>
-
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p><br></p>
-          <p>That said, it is a helpful framework as long as we recognize the 
-           discrete vs. continuous dichotomy is not a perfect classification.</p>
-        </div>
-          </div>
-      </section>
-
-
-<!-- 
       <section>
-        <h2>Discrete Objects</h2>
-        <div class="container">
-            <p>Typically better suited for representation with the vector data model.</p>
+        <div class="title">
+            <h1>What is Data?</h1>
         </div>
-      </section>
- -->
-      <section>
-        <h3>Discrete Objects</h3>
+        <div class="subtitle">Peices of information that describe a phenomenon.</div>
+    </section>
+
+    <section>
         <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Buildings</b>
-            <ul>
-              <li>Concrete Boundaries</li>
-              <li>Countable</li>
-              <li>Real Physical Object</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/building.png" width="500"></p>
-          </div>
+            <h2 class ="header">What is a Phenomenon?</h2>
+            <div class="left">
+                <p>Phenomenon: a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question.</p>
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">A lightning strike</li>
+                    <li class="fragment fade-up" data-fragment-index="1">A coastline</li>
+                    <li class="fragment fade-up" data-fragment-index="2">A country</li>
+                    <li class="fragment fade-up" data-fragment-index="3">A dog on a kayak!</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Anything and everything are phenomena!</li>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                    <span class="helper"></span>
+                        <img src="images/lightning.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/03-vector.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="3">
+                    <span class="helper"></span>
+                        <img src="images/dog_on_a_boaty.jpg" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-       <section>
-        <h3>Discrete Objects</h3>
+    <section>
         <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Political Boundaries</b>
-            <ul>
-            <li>Distinct Boundaries</li>
-            <li>Countable</li>
-            <li>Not a Physical Object</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/03-vector.png" width="500"></p>
-          </div>
-        </div>
-      </section>
-
-  <!--     <section>
-        <h2>Continuous Fields</h2>
-        <div class="container">
-            <p>Typically better suited for representation the raster data model.</p>
-        </div>
-      </section> -->
-
-       <section>
-        <h3>Continuous Fields</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Elevation</b>
-            <ul>
-            <li>Everywhere on Earth</li>
-            <li>No "number of elevations"</li>
-            <li>A physical property</li>
-            </ul>
-          <!-- <p><img src="images/geoid_2.png" width="600"></p> -->
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/elevation.png" width="500"></p>
-          </div>
-        </div>
-      </section>
-
-
-
-       <section>
-        <h3>Continuous Fields</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Density of tweets</b>
-            <ul>
-            <li>Everywhere has this too</li>
-            <li>Derived from something countable</li>
-            <li>Not a physical property</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/tweet_density.png" width="650"></p>
-          </div>
-        </div>
-      </section>
-
-       <section>
-        <h3>Working Together</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p>In Module 1, you used discrete data (deaths) to calculate a continuous field (Kernel Density).</p>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/Final_Map.png" width="400"></p>
-          </div>
-        </div>
-      </section>
-
-         <section>
-        <h3>Working Together</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p>In this Module you calculate:</p>
-            <ul>
-              <li>Average NDVI value (<b>continuous field</b>)</li>
-              <li>Within census areas (<b>discrete objects</b>)</li>
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="left">
+            <p><b>Discrete Objects</b></p>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="0">Distinct boundaries</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="0">Chat can be exactly measured</li>
+                  </ul>
+                  <li class="fragment fade-up" data-fragment-index="1">Finite</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="1">They are countable and cannot be infinitely subdivided</li>
+                  </ul>
               </ul>
           </div>
-          <div class="right" style="text-align: right;">
-          <p><img src="images/FinalMap.png" width="600"></p>
+          <div class="right">
+            <p><b>Continuous Fields</b></p>
+            <li class="fragment fade-up" data-fragment-index="0">No distinct boundaries</li>
+            <ul>
+                <li class="fragment fade-up" data-fragment-index="0">Everywhere has a value</li>
+            </ul>
+            <li class="fragment fade-up" data-fragment-index="1">Infinitely divisible</li>
+            <ul>
+                <li class="fragment fade-up" data-fragment-index="1">They are not countable and can be infinitely subdivided</li>
+            </ul>
           </div>
         </div>
-      </section>
+    </section>
+      
+    <section>
+        <div class="container">
+          <h2 class ="header">Projection Methods</h2>
+          <div class="left">
+              <p>How/where to reference the surface influences how the map is distorted.</p>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="0"><b>Tangent:</b> when projections touch the "earth's" surface at a one point or line</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="0">Point for planar projections, line for conic and cylindrical projections</li>
+                  </ul>
+                  <li class="fragment fade-up" data-fragment-index="1"><b>Secant:</b> when projections touch the "earth's" surface along two lines</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="1">Helps minimize reduce distortion</li>
+                  </ul>
+                  <li class="fragment fade-up" data-fragment-index="2">These are the only locations on map without distortions</li>
+              </ul>
+          </div>
+          <div class="figure">
+              <span class="helper"></span>
+              <img src="images/tan_sec.gif" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+      
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Planar Projections</h2>
+          <div class="full">
+            <p>Sometimes also called azimuthal or zenith projections, planar projections are the simplest approach.</p>
+            <ul>
+                <li>Limited applicability/scope and are typically only used for polar regions.</li>
+            </ul>
+            <div class="subfigure">
+                <img src="images/planar.jpg"  width="100%"; style = "border:2px solid #555">
+            </div>
+           </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Planar Projections</h2>
+            <div class="left">
+                <p>The Polar Azimuthal projection, tangent to the north pole.</p>
+                <img src="images/02-Azimuthal-map.png" width="80%">
+            </div>
+            <div class="figure">
+                <img src="images/Polar.png" width="100%">
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">Conic Projections</h2>
+            <div class="full">
+            <p>Conic projections are a great option for the mid-latitudes.  They have one central meridian and one/two standard parallel(s).</p>
+            <ul>
+                <li>Can only cover one hemisphere at a time</li>
+            </ul>
+            <div class="subfigure">
+                <div class="r-stack">
+                    <img class="fragment fade-out" data-fragment-index="0" src="images/conic.jpg"  width="100%"; style = "border:2px solid #555">
+                    <img class="fragment fade-in" data-fragment-index="0" src="images/conic_secant.jpg"  width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">Conic Projections</h2>
+            <div class="left">
+                <p>The BC Environment Albers projection, secant to 50&deg; N and 58&deg; N, central meridian 126&deg; W.</p>
+                <img src="images/02-BC-Albers-map.png" width="80%">
+            </div>
+            <div class="figure">
+                <img src="images/first-nations-bc.jpg" width="100%">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Conic Projections</h2>
+            <div class="left">
+                <p>Canada's "official" map projection: Canada Lambert Conformal Conic</p>
+                <ul>
+                    <img src="images/ca_lambert.png" width="80%">
+                </ul>
+            </div>
+            <div class="figure">
+                <img src="images/ca_lambert.jpg" height="100%">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 1</h1>
+            <div class="question">
+                <p>A secant conic projection has one standard parallel while a tangent conic projection has two.</p>
+                <ul>
+                    <li>True</li>
+                    <li>False</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Cylindrical Projections</h2>
+            <div class="full">
+            <p>The only method that works (well) for displaying the full Earth.</p>
+            <div class="subfigure">
+                <img src="images/cylindrical.jpg"  width="95%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">Cylindrical Projections</h2>
+            <div class="left">
+                <p>The Mercator projection, tangent to 0&deg; N and, central meridian 0&deg; W.</p>
+                <ul>
+                    <img src="images/mercator-vs-truesize.png" width="100%"; style = "border:2px solid #555">
+                </ul>
+            </div>
+            <div class="figure">
+                <span class="helper"></span>
+                <img src="images/02-Mercator-map.png" height="100%">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Cylindrical Projections</h2>
+            <div class="left">
+                <p>Transverse cylinders projections are also frequently used.</p>
+                <ul>
+                    <li>Minimize distortion near secant lines</li>
+                    <img src="images/utm_3.png" width="100%"; style = "border:2px solid #555">
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="0">
+                     <img  src="images/02-UTM-13N-map.png" height="100%">
+                </div>
+                <div class="figure fragment fade-in" data-fragment-index="0">
+                     <img src="images/DeltaMap.png" height="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Pseudocylindrical Projections</h2>
+            <div class="left">
+                <p>Some special projections apply more complex transformations.</p>
+                <img src="images/02-Sinusoidal-map.png" height="80%">
+            </div>
+            <div class="right">
+                <p>These tend to be used less frequently.</p>
+                <ul>
+                    <li>Won't be used in this class</li>
+                </ul>
+                <img src="images/Sinusoidal.jpg" width="100%" ; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 2</h1>
+            <div class="question">
+                <p>Which of the three methods for projecting spatial data are best for global scale maps? (select all that apply)</p>
+                <ul>
+                    <li>Cylindrical</li>
+                    <li>Conic</li>
+                    <li>Planar</li>
+                    <li>Azimuthal</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">Types of Deformations</h2>
+            <div class="full">
+                <p>All map projections must induce distortions in order to display the 3D earth in 2D, they can cause different distortions in different ways:</p>
+                <ul>
+                    <li class="fragment fade-in" data-fragment-index="0"><b>Tearing</b>: All projections have tearing (edges)</li>
+                    <li class="fragment fade-in" data-fragment-index="1"><b>Shearing</b>: Shapes and angles are contorted</li>
+                    <li class="fragment fade-in" data-fragment-index="2"><b>Compression</b>: Changes to area</li>
+                    <ul>
+                        <li class="fragment fade-in" data-fragment-index="2">Bit of a misnomer, often results in expansion</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">Tearing</h2>
+            <div class="full">
+                <p>All projections require tearing, some projections have more than others.</p>
+                <p style="text-align: center">
+                    <img src="images/Mollewide.png" width="70%" ; style = "border:2px solid #555">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Shearing</h2>
+            <div class="full">
+                <p>Shapes and angles are contorted by some, but not all projections.</p>
+                <div class="r-stack">
+                    <img class ="fragment fade-out" data-fragment-index="0"  src="images/Sinusoidal.jpg" width="75%" ; style = "border:2px solid #555">
+                    <p class ="fragment fade-in" data-fragment-index="0" style="text-align: center">
+                        <img src="images/Gall–Peters_projection_SW.jpg" width="60%" ; style = "border:2px solid #555">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Compression</h2>
+            <div class="left">
+                <p>Areas can be "inflated" or "deflated" some, but not all projections.</p>
+                <ul>
+                    <li>This can cause <b>serious</b> issues when you are trying to calculate statistics dependent upon area!</li>
+                    <li>Population density is a good example</li>
+                    <ul>
+                        <li>You will get hands on experience with this issue in <a href="https://geos270.github.io/Module2/">Lab</a></li>
+                    </ul>
+                </ul>
+            </div>
+                
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="0">
+                    <span class="helper"></span>
+                    <img   src="images/compression.jpg" width="100%" ; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in" data-fragment-index="0">
+                    <span class="helper"></span>
+                    <img src="images/mercator-vs-truesize.png" width="100%" ; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Types of Projections</h2>
+            <div class="full">
+                <p>All map projections must induce distortions in order to display the 3D earth in 2D.  But there are different types of projections that are designed to preserve some attributes.</p>
+                <ul>
+                    <li class="fragment fade-in" data-fragment-index="0"><b>Conformal</b>: Shapes and angles are preserved, i.e. they <b>prevent shearing</b></li>
+                    <li class="fragment fade-in" data-fragment-index="1"><b>Equal-area</b>: Areas is preserved, i.e. they <b>prevent compression</b></li>
+                    <li class="fragment fade-in" data-fragment-index="2"><b>Equidistant</b>: Distance is preserved</li>
+                    <ul>
+                        <li class="fragment fade-in" data-fragment-index="2"><i>Not "globally"</i>, only in certain regions, ie. the tangent/secant lines</li>
+                    </ul>
+                    <li class="fragment fade-in" data-fragment-index="3"><b>True-direction</b>: Gives shortest route between points (great circle)</li>
+                    <ul>
+                        <li class="fragment fade-in" data-fragment-index="3"><i>Not "globally"</i>, only certain paths, ie. outward from the center of an azimuthal projection</li>
+                    </ul>
+                    <li class="fragment fade-in" data-fragment-index="4"><b>Compromise</b>: Splits the difference for aesthetics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Conformal Projections</h2>
+            <div class="left">
+                <p>These projections are designed to maintain the shapes/angles across the map.</p>
+                <ul>
+                    <li>The mercator projection is a good example</li>
+                    <ul>
+                        <li>Because it maintains shape/angles, it can be used to circumnavigate the globe in a sailboat</li>
+                        <li>But to maintain shape globally, it must <b>severely</b> distort area</li>
+                        <li>Scale changes across the map, poor for measuring distances or areas</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/conformal.png" width="100%">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Conformal Projections</h2>
+            <div class="left">
+                <p>These projections are designed to maintain the shapes/angles across the map.</p>
+                <ul>
+                    <li>The lambert conformal conic projection is also a good example</li>
+                    <ul>
+                        <li>Because it is a conic projection showing a smaller region and it uses secant lines, areal distortions are less obvious/drastic</li>
+                        <li>However, the area calculations are not true to reality</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/lambert.jpg" width="100%">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Universal Transverse Mercator (UTM)</h2>
+            <div class="left">
+                <p>Globe is divided into 60 strips 6&deg; wide, spanning 80&deg;N to 80&deg;S.</p>
+                <ul>
+                    <li>Minimal distortion within zones</li>
+                    <img src="images/utm_1.png" height="80%"; style = "border:2px solid #555">
+                </ul>
+            </div>
+            <div class="right">
+                <p>A special type of conformal projection.</p>
+                <ul>
+                    <li>Only used for "small" areas</li>
+                    <img src="images/utm_2.png" width="100%"; style = "border:2px solid #555">
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">UTM Zones</h2>
+            <div class="left">
+                <p>Vancouver is in UTM Zone 10N.</p>
+                <img src="images/FinalMap.png" height="80%"; style = "border:2px solid #555">
+            </div>
+            <div class="figure">
+                <p>The Mackenzie Delta, UTM Zone 8N.</p>
+                <img src="images/DeltaMap.png" height="80%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Equal Area Projections</h2>
+            <div class="left">
+                <p>These projections are designed to preserves area.</p>
+                <ul>
+                    <li>The gall peters projection is a good example</li>
+                    <ul>
+                        <li>Because it maintains area, it can be used to calculate population density</li>
+                        <li>Very useful in GIS where area must be preserved for land analysis</li>
+                        <li>Angles/shapes are deformed so it "looks" weird</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/equal_area.png" width="100%">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Equal Area Projections</h2>
+            <div class="left">
+                <p>These projections are designed to preserves area.</p>
+                <ul>
+                    <li>The albers equal area projection is also a good example</li>
+                    <ul>
+                        <li>Because it is a conic projection showing a smaller region and it uses secant lines, shape/angle distortions are less obvious/drastic</li>
+                        <li>You can still see it, especially in the north</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/albers.jpg" width="100%">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Equidistant Projections</h2>
+            <div class="left">
+                <p>These projections are designed to preserves distance.</p>
+                <ul>
+                    <li>Distance <b>cannot</b> be preserved globally, only specific locations</li>
+                    <ul>
+                        <li>e.g. lines radiating from center of an azimuthal projection</li>
+                        <li>e.g. lines of longitude + central meridian of sinusoidal projection</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="0">
+                    <span class="helper"></span>
+                    <img src="images/Equidistant_Azimuthal.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment current-visible" data-fragment-index="0">
+                    <span class="helper"></span>
+                    <img src="images/Polar.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in" data-fragment-index="1">
+                    <span class="helper"></span>
+                    <img src="images/Sinusoidal.jpg" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">True-direction Projections</h2>
+            <div class="left">
+                <p>These projections are designed to preserves direction.</p>
+                <ul>
+                    <li>Direction <b>cannot</b> be preserved globally, only specific locations</li>
+                    <ul>
+                        <li>e.g. lines radiating from center of an azimuthal projection</li>
+                        <li>Often, equidistant are also true direction but not always</li>
+                        <li>Will give us a "great circle" route, the shortest distance between two locations</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="0">
+                    <span class="helper"></span>
+                    <img src="images/Equidistant_Azimuthal.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in" data-fragment-index="0">
+                    <span class="helper"></span>
+                    <img src="images/GreatCircle.jpeg" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Compromise Projections</h2>
+            <div class="left">
+                <p>These projections are designed for aesthetics.</p>
+                <img src="images/Winkel.jpg" width="100%"; style = "border:2px solid #555">
+            </div>
+            <div class="right">
+                <p>Minimize distortion without preserving any one property.</p>
+                <img src="images/Winkel_dist.png" width="100%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 3</h1>
+            <div class="question">
+                <p>A conformal projection will maintain which properties? (select all that apply)</p>
+                <ul>
+                    <li>Area</li>
+                    <li>Shape</li>
+                    <li>Distance</li>
+                    <li>Angles</li>
+                    <li>Direction</li>
+                    <li>All of the above</li>
+                    <li>None of the above</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">What projection is right for my map?</h2>
+            <div class="full">
+                <p>There isn't a "correct" answer here, but there are definitely wrong answers.</p>
+                <ul>
+                    <li>You can typically get similar results with a handful of different projections, depending on your application</li>
+                    <li>Best practice is to <b>always</b> use an equal area projection to calculate areas/densities</li>
+                    <ul>
+                        <li>But there are many different equal area projections</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Things to Think About</h2>
+            <div class="left" >
+                <p>Where do the data come from?</p>
+                <ul>
+                    <li>Some organizations use a standard projection</li>
+                    <ul>
+                        <li>Stats Canada: Lambert Conformal Conic</li>
+                        <li>British Columbia: BC Environment Albers</li>                    
+                    </ul>
+                </ul>
+        </div>
+        <div class="right" >
+            <p>What is the map's purpose?</p>
+            <ul>
+                <li>Conformal/compromise are aesthetically pleasing.</li>
+                <li>Navigational maps, use conformal, equidistant, etc.</li>
+                <li>Thematic maps (areas/densities) use equal area.</li>
+          </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Map Scale</h2>
+            <div class="left">
+                <p>The relationship between distance on a map to distance in the real world.</p>
+                <ul>
+                    <li>How much smaller is a unit on the map than a unit on the earth?</li>
+                    <ul>
+                        <li>i.e. 1 cm on the map = 1 km on the Earth</li>
+                    </ul>
+                    <li>Can be described:</li>
+                    <ul>
+                        <li>Graphically</li>
+                        <li>Verbally</li>
+                        <li>Representative fraction</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/scale_1.png" width="100%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Map Scale</h2>
+            <div class="left">
+                <p><b> Small Scale</b> Zoomed out, large area, more generalization, less detail.</p>
+                <img src="images/small_scale.png" width="70%"; style = "border:2px solid #555">
+            </div>
+            <div class="right">
+                <p><b> Large Scale</b> Zoomed in, small area, more detail, less generalization.</p>
+                <img src="images/large_scale.png" width="70%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Map Scale</h2>
+            <div class="left">
+                <p><b> Small Scale</b> 1:10,000,000 <br>1/10,000,000 = 0.0000001</p>
+                <img src="images/small_scale.png" width="70%"; style = "border:2px solid #555">
+            </div>
+            <div class="right">
+                <p><b> Large Scale</b> 1:1,000 <br>1/1,000 = 0.001</p>
+                <img src="images/large_scale.png" width="70%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2 class ="header">Map Scale</h2>
+            <div class="left">
+                <p>All maps require simplification of real world features.  The degree of simplification is a function of the map's scale.</p> 
+                <ul>
+                    <li>Smaller scale maps require more generalization.</li>
+                    <li>Larger scale maps can include more detail.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/scale_general.png" width="100%"; style = "border:2px solid #555">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Map Scale & Projection</h2>
+            <div class="left">
+                <p>Map scale will impact our choice of projection.</p>
+                <ul>
+                    <li>Projections that work at 1:000 aren't necessarily suited for a 1:10,000,000 map</li>
+                    <li>With conformal projections like the Mercator, scale changes with position on the map</li>
+                    <ul>
+                        <li>Preserves scale "locally"</li>
+                        <li>Scale is grossly distorted globally</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="figure">
+                <iframe src="Web_Mercator_Iqualuit.html" title="Processes" scrolling="no" frameborder="0"
+                style="border: 0;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 4</h1>
+            <div class="question">
+                <p>A large scale map shows a _____ area of the earth and small scale map shows a _____ area of the earth.</p>
+            </div>
+        </div>
+    </section>
+
+
 
     </div><!-- .slides -->
 
   </div><!-- .reveal -->
 
-  <!-- not needed since 3.8.0 -->
-  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/head.min.js"><script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
   <script>
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
@@ -426,21 +922,15 @@
       center: true,
       overview: false,
       loop: false,
-      margin: 0.04,
-      width: 1200,
+      margin: 0.03,
+      width: 1350,
+      height: 700,
+      transition: 'none',
+      plugins: [ RevealMath.MathJax2 ]
+    },
 
-      transition: 'none', // none/fade/slide/convex/concave/zoom
 
-      // Optional reveal.js plugins, loaded from jsDelivr
-      dependencies: [
-        { src: srcUrlPrefix + 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
-        { src: srcUrlPrefix + 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: srcUrlPrefix + 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: srcUrlPrefix + 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
-        { src: srcUrlPrefix + 'plugin/zoom-js/zoom.js', async: true },
-        { src: srcUrlPrefix + 'plugin/notes/notes.js', async: true }
-      ]
-    });
+    );
   </script>
 </body>
 
