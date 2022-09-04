@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
 
+  <!-- <meta charset="utf-8"> -->
+
   <title>Reveal.js template</title>
   <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
 
@@ -13,20 +15,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css">
-  <!-- see https://cdnjs.com/libraries/reveal.js/3.6.0 for what's available -->
-  <!-- examples: simple, beige, black, blood, league, moon, night, serif, sky, solarized, white ... -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/sky.css" id="theme">
-  <!-- see: https://cdnjs.com/libraries/highlight.js/ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
 
   <!-- Printing and PDF exports -->
   <script>
     // Load print, pdf stylesheets from jsDelivr
-    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/';
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/';
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
@@ -35,40 +32,164 @@
   </script>
 
   <!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
     <![endif]-->
   <style>
-    body {
-      /* make it totally black */
-      /*background-color: black;*/
-      background-color: #c5f5fa;
-    }
+    
+.container {
+  position: fixed;
+    height: 700px;
+    width: 100%;
+}
 
-    .container {
-      display: flex;
-    }
+.title{
+  position: relative;
+  top: 5%;
+}
 
-    .col {
-      flex: 1
-    }
+.subtitle{
+  position: relative;
+  top: 10%;
+}
 
+.question{
+  position: relative;
+  text-align: left;
+  top: 10%;
+}
+
+
+.header {
+  top: 1%;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+}
+
+.full {
+  width: 95%;
+  top:  12%;
+  left: 0%;
+  text-align: left;
+  position: absolute; 
+}
 
 .left {
-  left:-8.33%;
+  width: 49%;
+  height: 80%;
+  top: 12%;
+  left: 0%;
+  position: absolute;
   text-align: left;
-  float: left;
-  width:40%;
-  z-index:-10;
 }
 
 .right {
-  left:31.25%;
-  top: 75px;
-  float: right;
-  text-align: right;
-  z-index:-10;
-  width:60%;
+  width: 49%;
+  top: 12%;
+  height: 80%;
+  left: 51%;
+  position: absolute;
+  text-align: left;
 }
+
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.figure {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+
+.subfigure {
+  width: 100%;
+  /* height: 100%; */
+  left: 0%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+h1 {
+  display: block;
+  font-size: 3em !important; 
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+  
+h2 {
+  display: block;
+  font-size: 1.5em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.reveal a {
+  color: blue;
+}
+
+.reveal {
+  background-color: #e6f9fc;
+}
+
+ul {
+    padding-left: 0;
+    font-size: 90%;
+
+} 
+
+ol {
+  counter-reset: item;
+  font-size: 90%;
+  padding-left: 0;
+}
+
+li.nl {
+  display: block;
+}
+
+li.nl:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+ol ol li.nl::before {
+    content: counters(item, ".") " ";
+}
+
+#main img {
+    float: left;
+}
+
+.col {
+    flex: 1
+}
+
 
   </style>
 </head>
@@ -78,344 +199,196 @@
   <div class="reveal">
 
     <div class="slides">
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="col" style="text-align: center;">
-          <p><img src="images/phenomenon.png" width="1000"></p>
-           </div>
-      </section>
-
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A lightning strike</p>
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/lightning.jpg" height ="500"></p>
-          </div>
-      </section>
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A Country</p>
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/03-vector.png" width ="500"></p>
-          </div>
-      </section>
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A Coastline</p>
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/beach.jpg" width ="500"></p>
-          </div>
-      </section>
-
-
-       <section>
-        <h2>What is a Phenomenon?</h2>
-        <div class="container">
-          <div class="left" style="text-align: Left;">
-          <!-- <p>A phenomena can be:</p> -->
-          <p>A dog on a kayak!</p>
-
-            <li class="fragment">Anything and everything are phenomena!</li>
-          <!-- <p>Anything and everything are phenomena!</p> -->
-          </div>
-          <div class="right" style="text-align: center;">
-          <p><img src="images/dog_on_a_boat.jpg" width="1000"></p>
-          </div>
-      </section>
-
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <!-- <p><br></p> -->
-          <p><b>Discrete Objects</b></p>
-        </div>
-        <div class="col" style="text-align: Left;">
-          <p><b>Continuous Fields</b></p>
-        </div>
-          </div>
-      </section>
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-          <p><b>Discrete Objects</b></p>
-          <ul>
-            <li>Distinct boundaries - can be exactly measured</li>
-            <li>Finite - countable</li>
-          </ul>
-        </div>
-        <div class="col" style="text-align: Left;">
-          <p><b>Continuous Fields</b></p>
-          <ul>
-            <li>No distinct boundaries - everywhere has a value</li>
-            <li>Infinitely divisible - not countable</li>
-          </ul>
-            <!-- <p>-Strong (positive) spatial autocorrelation</p> -->
-        </div>
-          </div>
-      </section>
-
-<!-- 
-       <section>
-        <h3>Spatial Autocorrelation</h3>
-        <div class="container">
-          <div class="col" style="text-align: Center;">
-          <p><img src="images/03-autocorrelation.png" width="800"></p>
-          <p>The measure of similarity between objects across space.  It allows us to make some a key assumptions when representing spatial data.</p>
-           </div>
-      </section> -->
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p><br></p>
-          <p>When is a phenomenon <b>discrete</b> or <b>continuous</b>?</p>
-          <ul>
-            <li>To an extent, it depends on our <i>perspective</i> and the <i>scale</i> of our analysis.</li>
-            <li>Many phenomenon are a bit of both.</li>
-          </ul>
-        </div>
-          </div>
-      </section>
-
-
-       <section style="text-align: left;">
-        <h3>Lightning</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <li>A <b>strike</b> is a discrete object</li>
-            <li class="fragment">A lighting bolt ...? </li>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/lightning.jpg" height ="500"></p>
-          </div>
-        </div>
-      </section>
-
-       <section style="text-align: left;">
-        <h3>Lightning</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-            <li>A <b>strike</b> is a discrete object</li>
-            <li>A lighting bolt ...? </li>
-            <li>Strike <b>frequency</b> is a continuous field</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/03-lightning-density.gif" height ="500"></p>
-          </div>
-        </div>
-      </section>
-
-
-       <section style="text-align: left;">
-        <h3>Coastline</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-              <li>Continuous field at <b>large scale</b></li>
-            <p><br></p>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/beach.jpg" width ="500"></p>
-          </div>
-        </div>
-      </section>
-
-       <section style="text-align: left;">
-        <h3>Coastline</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-              <li>Continuous field at <b>large scale</b></li>
-              <li>Discrete object at <b>small scale</b></li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/beach_small_scale.png" widht ="500"></p>
-          </div>
-        </div>
-      </section>
-
-       <section style="text-align: left;">
-        <h3>Coastline</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <br>
-            <ul>
-              <li>Continuous field at <b>large scale</b></li>
-              <li>Discrete object at <b>small scale</b></li>
-              <li>Unless you change the <a href="https://coastal.climatecentral.org/"><i>time scale</i></a></li>
-            </ul>
-
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/sea_level_rise.png" widht ="500"></p>
-          </div>
-        </div>
-      </section>
-
-
-       <section>
-        <h2>Types of Phenomena</h2>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p><br></p>
-          <p>That said, it is a helpful framework as long as we recognize the 
-           discrete vs. continuous dichotomy is not a perfect classification.</p>
-        </div>
-          </div>
-      </section>
-
-
-<!-- 
       <section>
-        <h2>Discrete Objects</h2>
-        <div class="container">
-            <p>Typically better suited for representation with the vector data model.</p>
+        <div class="title">
+            <h1>What is Data?</h1>
         </div>
-      </section>
- -->
-      <section>
-        <h3>Discrete Objects</h3>
+        <div class="subtitle">Peices of information that describe a phenomenon.</div>
+    </section>
+
+    <section>
         <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Buildings</b>
-            <ul>
-              <li>Concrete Boundaries</li>
-              <li>Countable</li>
-              <li>Real Physical Object</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/building.png" width="500"></p>
-          </div>
+            <h2 class ="header">What is a Phenomenon?</h2>
+            <div class="left">
+                <p>Phenomenon: a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question.</p>
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">A lightning strike</li>
+                    <li class="fragment fade-up" data-fragment-index="1">A coastline</li>
+                    <li class="fragment fade-up" data-fragment-index="2">A country</li>
+                    <li class="fragment fade-up" data-fragment-index="3">A dog on a kayak!</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Anything and everything are phenomena!</li>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                    <span class="helper"></span>
+                        <img src="images/lightning.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/03-vector.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="3">
+                    <span class="helper"></span>
+                        <img src="images/dog_on_a_boaty.jpg" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-       <section>
-        <h3>Discrete Objects</h3>
+    <section>
         <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Political Boundaries</b>
-            <ul>
-            <li>Distinct Boundaries</li>
-            <li>Countable</li>
-            <li>Not a Physical Object</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/03-vector.png" width="500"></p>
-          </div>
-        </div>
-      </section>
-
-  <!--     <section>
-        <h2>Continuous Fields</h2>
-        <div class="container">
-            <p>Typically better suited for representation the raster data model.</p>
-        </div>
-      </section> -->
-
-       <section>
-        <h3>Continuous Fields</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Elevation</b>
-            <ul>
-            <li>Everywhere on Earth</li>
-            <li>No "number of elevations"</li>
-            <li>A physical property</li>
-            </ul>
-          <!-- <p><img src="images/geoid_2.png" width="600"></p> -->
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/elevation.png" width="500"></p>
-          </div>
-        </div>
-      </section>
-
-
-
-       <section>
-        <h3>Continuous Fields</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <b>Density of tweets</b>
-            <ul>
-            <li>Everywhere has this too</li>
-            <li>Derived from something countable</li>
-            <li>Not a physical property</li>
-            </ul>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/tweet_density.png" width="650"></p>
-          </div>
-        </div>
-      </section>
-
-       <section>
-        <h3>Working Together</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p>In Module 1, you used discrete data (deaths) to calculate a continuous field (Kernel Density).</p>
-          </div>
-          <div class="col" style="text-align: right;">
-          <p><img src="images/Final_Map.png" width="400"></p>
-          </div>
-        </div>
-      </section>
-
-         <section>
-        <h3>Working Together</h3>
-        <div class="container">
-          <div class="col" style="text-align: Left;">
-            <p>In this Module you calculate:</p>
-            <ul>
-              <li>Average NDVI value (<b>continuous field</b>)</li>
-              <li>Within census areas (<b>discrete objects</b>)</li>
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="left">
+            <p><b>Discrete Objects</b></p>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="0">Distinct boundaries</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="0">Chat can be exactly measured</li>
+                  </ul>
+                  <li class="fragment fade-up" data-fragment-index="1">Finite</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="1">They are countable and cannot be infinitely subdivided</li>
+                  </ul>
               </ul>
           </div>
-          <div class="right" style="text-align: right;">
-          <p><img src="images/FinalMap.png" width="600"></p>
+          <div class="right">
+            <p><b>Continuous Fields</b></p>
+            <li class="fragment fade-up" data-fragment-index="0">No distinct boundaries</li>
+            <ul>
+                <li class="fragment fade-up" data-fragment-index="0">Everywhere has a value</li>
+            </ul>
+            <li class="fragment fade-up" data-fragment-index="1">Infinitely divisible</li>
+            <ul>
+                <li class="fragment fade-up" data-fragment-index="1">They are not countable and can be infinitely subdivided</li>
+            </ul>
           </div>
         </div>
-      </section>
+    </section>
+      
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="full">
+            <p>When is a phenomenon <b>discrete</b> or <b>continuous</b>?</p>
+            <ul>
+              <li>To an extent, it depends on our <i>perspective</i> and the <i>scale</i> of our analysis.</li>
+              <li>Many phenomenon are a bit of both.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Lightning</h2>
+            <div class="left">
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">A <b>strike</b> is a discrete object</li>
+                    <li class="fragment fade-up" data-fragment-index="1">What about a lighting bolt ...?</li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="1">Doesn't really have clearly defined boundaries?</li>
+                        <li class="fragment fade-up" data-fragment-index="1">Sort of continuous</li>
+                    </ul>
+                    <li class="fragment fade-up" data-fragment-index="2">Strike <b>frequency</b> is a continuous field</li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="2">Everywhere has a frequency of lighting strikes</li>
+                        <li class="fragment fade-up" data-fragment-index="2">Even the absence of lighting strikes, is still a frequency of strikes</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/lightning.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/03-lightning-density.gif" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">A Coastline</h2>
+            <div class="left">
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">Continuous field at <b>large scale</b></li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="0">Tides & waves</li>
+                        <li class="fragment fade-up" data-fragment-index="0">Where is the exact boundary?</li>
+                    </ul>
+                    <li class="fragment fade-up" data-fragment-index="1">Discrete object at <b>small scale</b></li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="1">Zoom out and the tides/waves don't really matter</li>
+                        <li class="fragment fade-up" data-fragment-index="1">Its easy to draw a static boundary</li>
+                    </ul>
+                    <li class="fragment fade-up" data-fragment-index="2">Unless you change the <a href="https://coastal.climatecentral.org/"><i>time scale</i></a></li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="2">Until you start thinking about the long term :(</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach_small_scale.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/sea_level_rise.png" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="full">
+            <p>Most things don't fall perfectly into one category or the other.</p>
+            <ul>
+                <li>That said, it is a helpful framework as long as we recognize the discrete vs. continuous dichotomy is not a perfect classification<lip>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 1</h1>
+            <div class="question">
+                <p>Discrete objects: (select all that apply)</p>
+                <ul>
+                    <li>Are countable</li>
+                    <li>Do not have distinct boundaries</li>
+                    <li>Are infinitely divisible</li>
+                    <li>Have well defined boundaries</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
 
     </div><!-- .slides -->
 
   </div><!-- .reveal -->
 
-  <!-- not needed since 3.8.0 -->
-  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/head.min.js"><script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
   <script>
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
@@ -426,21 +399,15 @@
       center: true,
       overview: false,
       loop: false,
-      margin: 0.04,
-      width: 1200,
+      margin: 0.03,
+      width: 1350,
+      height: 700,
+      transition: 'none',
+      plugins: [ RevealMath.MathJax2 ]
+    },
 
-      transition: 'none', // none/fade/slide/convex/concave/zoom
 
-      // Optional reveal.js plugins, loaded from jsDelivr
-      dependencies: [
-        { src: srcUrlPrefix + 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
-        { src: srcUrlPrefix + 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: srcUrlPrefix + 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: srcUrlPrefix + 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
-        { src: srcUrlPrefix + 'plugin/zoom-js/zoom.js', async: true },
-        { src: srcUrlPrefix + 'plugin/notes/notes.js', async: true }
-      ]
-    });
+    );
   </script>
 </body>
 

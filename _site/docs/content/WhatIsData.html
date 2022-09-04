@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- <meta charset="utf-8"> -->
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+  <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    // Load print, pdf stylesheets from jsDelivr
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <style>
+    
+.container {
+  position: fixed;
+    height: 700px;
+    width: 100%;
+}
+
+.title{
+  position: relative;
+  top: 5%;
+}
+
+.subtitle{
+  position: relative;
+  top: 10%;
+}
+
+.question{
+  position: relative;
+  text-align: left;
+  top: 10%;
+}
+
+
+.header {
+  top: 1%;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+}
+
+.full {
+  width: 95%;
+  top:  12%;
+  left: 0%;
+  text-align: left;
+  position: absolute; 
+}
+
+.left {
+  width: 49%;
+  height: 80%;
+  top: 12%;
+  left: 0%;
+  position: absolute;
+  text-align: left;
+}
+
+.right {
+  width: 49%;
+  top: 12%;
+  height: 80%;
+  left: 51%;
+  position: absolute;
+  text-align: left;
+}
+
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.figure {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+
+.subfigure {
+  width: 100%;
+  /* height: 100%; */
+  left: 0%;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+h1 {
+  display: block;
+  font-size: 3em !important; 
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+  
+h2 {
+  display: block;
+  font-size: 1.5em !important;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.reveal a {
+  color: blue;
+}
+
+.reveal {
+  background-color: #e6f9fc;
+}
+
+ul {
+    padding-left: 0;
+    font-size: 90%;
+
+} 
+
+ol {
+  counter-reset: item;
+  font-size: 90%;
+  padding-left: 0;
+}
+
+li.nl {
+  display: block;
+}
+
+li.nl:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+ol ol li.nl::before {
+    content: counters(item, ".") " ";
+}
+
+#main img {
+    float: left;
+}
+
+.col {
+    flex: 1
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+      <section>
+        <div class="title">
+            <h1>What is Data?</h1>
+        </div>
+        <div class="subtitle">Data is information describing some phenomenon.</div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">What is a Phenomenon?</h2>
+            <div class="left">
+                <p>Phenomenon: a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question.</p>
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">A lightning strike</li>
+                    <li class="fragment fade-up" data-fragment-index="1">A coastline</li>
+                    <li class="fragment fade-up" data-fragment-index="2">A country</li>
+                    <li class="fragment fade-up" data-fragment-index="3">A dog on a kayak!</li>
+                    <li class="fragment fade-up" data-fragment-index="3">Anything and everything are phenomena!</li>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                    <span class="helper"></span>
+                        <img src="images/lightning.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/03-vector.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="3">
+                    <span class="helper"></span>
+                        <img src="images/dog_on_a_boaty.jpg" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="left">
+            <p><b>Discrete Objects</b></p>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="0">Distinct boundaries</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="0">Chat can be exactly measured</li>
+                  </ul>
+                  <li class="fragment fade-up" data-fragment-index="1">Finite</li>
+                  <ul>
+                      <li class="fragment fade-up" data-fragment-index="1">They are countable and cannot be infinitely subdivided</li>
+                  </ul>
+              </ul>
+          </div>
+          <div class="right">
+            <p><b>Continuous Fields</b></p>
+            <li class="fragment fade-up" data-fragment-index="0">No distinct boundaries</li>
+            <ul>
+                <li class="fragment fade-up" data-fragment-index="0">Everywhere has a value</li>
+            </ul>
+            <li class="fragment fade-up" data-fragment-index="1">Infinitely divisible</li>
+            <ul>
+                <li class="fragment fade-up" data-fragment-index="1">They are not countable and can be infinitely subdivided</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+      
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="full">
+            <p>When is a phenomenon <b>discrete</b> or <b>continuous</b>?</p>
+            <ul>
+              <li>To an extent, it depends on our <i>perspective</i> and the <i>scale</i> of our analysis.</li>
+              <li>Many phenomenon are a bit of both.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">Lightning</h2>
+            <div class="left">
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">A <b>strike</b> is a discrete object</li>
+                    <li class="fragment fade-up" data-fragment-index="1">What about a lighting bolt ...?</li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="1">Doesn't really have clearly defined boundaries?</li>
+                        <li class="fragment fade-up" data-fragment-index="1">Sort of continuous</li>
+                    </ul>
+                    <li class="fragment fade-up" data-fragment-index="2">Strike <b>frequency</b> is a continuous field</li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="2">Everywhere has a frequency of lighting strikes</li>
+                        <li class="fragment fade-up" data-fragment-index="2">Even the absence of lighting strikes, is still a frequency of strikes</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/lightning.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/03-lightning-density.gif" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class ="header">A Coastline</h2>
+            <div class="left">
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0">Continuous field at <b>large scale</b></li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="0">Tides & waves</li>
+                        <li class="fragment fade-up" data-fragment-index="0">Where is the exact boundary?</li>
+                    </ul>
+                    <li class="fragment fade-up" data-fragment-index="1">Discrete object at <b>small scale</b></li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="1">Zoom out and the tides/waves don't really matter</li>
+                        <li class="fragment fade-up" data-fragment-index="1">Its easy to draw a static boundary</li>
+                    </ul>
+                    <li class="fragment fade-up" data-fragment-index="2">Unless you change the <a href="https://coastal.climatecentral.org/"><i>time scale</i></a></li>
+                    <ul>
+                        <li class="fragment fade-up" data-fragment-index="2">Until you start thinking about the long term :(</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="r-stack">
+                <div class="figure fragment fade-out" data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach.jpg" height="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                    <span class="helper"></span>
+                        <img src="images/beach_small_scale.png" width="100%"; style = "border:2px solid #555">
+                </div>
+                <div class="figure fragment fade-in"  data-fragment-index="2">
+                    <span class="helper"></span>
+                        <img src="images/sea_level_rise.png" width="100%"; style = "border:2px solid #555">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Phenomena</h2>
+          <div class="full">
+            <p>Most things don't fall perfectly into one category or the other.</p>
+            <ul>
+                <li>That said, it is a helpful framework as long as we recognize the discrete vs. continuous dichotomy is not a perfect classification<lip>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 1</h1>
+            <div class="question">
+                <p>Discrete objects: (select all that apply)</p>
+                <ul>
+                    <li>Are countable</li>
+                    <li>Do not have distinct boundaries</li>
+                    <li>Are infinitely divisible</li>
+                    <li>Have well defined boundaries</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Discrete Objects</h2>
+          <div class="left">
+            <p><b>Buildings</b> are a great example.</p>
+            <ul>
+                <li>Concrete boundaries</li>
+                <li>Countable</li>
+                <li>Real physical object</li>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/building.png" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Discrete Objects</h2>
+          <div class="left">
+            <p><b>Political Boundaries</b> are also a great example.</p>
+            <ul>
+                <li>Distinct boundaries</li>
+                <li>Countable</li>
+                <li>Not a physical object</li>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/03-vector.png" width="100%">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Continuous Fields</h2>
+          <div class="left">
+            <p><b>Elevation</b> is a great example.</p>
+            <ul>
+                <li>Everywhere on Earth</li>
+                <li>No "number of elevations"</li>
+                <li>A physical property</li>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/elevation.png" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Continuous Fields</h2>
+          <div class="left">
+            <p><b>Density of tweets</b> is also a great example.</p>
+            <ul>
+                <li>Everywhere has this too</li>
+                <li>Derived from something countable</li>
+                <ul>
+                    <li>But not countable itself</li>
+                </ul>
+                <li>Not a physical property</li>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/tweet_density.jpg" width="90%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Working Together</h2>
+          <div class="left">
+            <p>Frequently we'll end up working with both discrete objects and continuous fields.</p>
+            <ul>
+                <li>In Module 1, you worked with: </li>
+                <ul>
+                    <li>Cholera deaths (Discrete objects)</li>
+                    <li>Kernel density (continuous field)</li>
+                </ul>
+                <li>We use <b>spatial data models</b> to represent information in a GIS</li>
+                <ul>
+                    <li><b>Vector Data Model</b> = discrete objects</li>
+                    <li><b>Raster Data Model</b> = continuous fields</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/Final_Map.png" height="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Digital information</h2>
+          <div class="left">
+            <p>We'll talk more about spatial data models later.  Ror now, lets think about data more broadly.  How do we represent data in a computer?</p>
+            <ul>
+                <li>Digital information is represented as bits (0's and 1's)</li>
+                <li>We typically quantify data as bytes (8 bits):</li>
+                <ul>
+                    <li>Kilobyte (kB) = 1,000 bytes</li>
+                    <li>Megabyte (MB) = 1,000,000 bytes</li>
+                    <li>Gigabyte (GB) = 1,000,000,000 bytes</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/bit-vs-byte-illustration.jpg" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Digital information</h2>
+          <div class="full">
+            <p>There are numerous ways to translate human readable data to binary, such as ASCII.</p>
+            <ul>
+                <li>Each character is represented as one byte</li>
+                <li>There are 2<sup>8</sup> = 256 unique combinations of 0's and 1's in a byte</li>
+                <li>Some examples:</li>
+                <ul>
+                    <li>"A" : 01000001</li>
+                    <li>"CAT": 01000011 01000001 01010100</li>
+                    <li>"31": 00110011 00110001</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Digital Information</h2>
+          <div class="full">
+            <p>Modern computers use 64-bit "architecture".  That is, the central processing unit (CPU) can handle 64 bits (8 bytes) of information at a time.</p>
+            <ul>
+                <li><b>"Word"</b> length is 64 bits</li>
+                <ul>
+                    <li>A "Word" is a unit of data</li>
+                    <ul>
+                        <li>i.e., an individual piece of information</li>
+                    </ul>
+                    <li>2<sup>64</sup> possible unique values</li>
+                    <ul>
+                        <li>>18 quintillion possible unique combinations of 1's and 0's to describe something</li>
+                    </ul>
+                </ul>
+                <li>CPUs can be stacked in parallel to handle more information at one time</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Representing Phenomena in GIS</h2>
+          <div class="full">
+            <p>Within the context of a GIS, every piece of information describing a phenomenon is referred to as an <b>Attribute</b>.</p>
+            <ul>
+                <li>Broadly speaking each attribute can address one of three questions:</li>
+                <ul>  
+                    <li><b>Where?</b></li>
+                    <li><b>What?</b></li>
+                    <li><b>When?</b></li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Attributes</h2>
+          <div class="full">
+            <p>There are multiple ways to classify/think about attributes.  One important distinction we must make</p>
+            <ul>  
+                <li><b>Non-Spatial Attributes</b>: describe what or when</li>
+                <li><b>Spatial Attributes</b>: describe where</li>
+                <ul>
+                    <li>Puts the <b>G</b>eographic in <b>G</b>IS</li>
+                    <li>Requires some special considerations</li>
+                    <ul>
+                        <li>We have already talked a bit about these consideration (map projections)</li>
+                        <li>We'll discuss more considerations in the next module</li>
+                    </ul>
+                </ul>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Types of Attributes</h2>
+          <div class="full">
+            <p>All data (attributes), spatial and non-spatial, can be either <b>qualitative</b> or <b>quantitative</b>.</p>
+            <ul>  
+                <li>The types of analysis we can do with qualitative data are more limited</li>
+                <li>That does not make quantitative data “better”</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Qualitative Data</h2>
+          <div class="full">
+            <p>Qualitative data is <b>Categorical</b>.  It is strictly descriptive and lacks any meaningful numeric value.</p>
+            <ul>  
+                <li>Textual, coded numerals, pictures, sounds, etc</li>
+                <ul>
+                    <li>Typically working with textual & coded numerals most frequently in GIS</li>
+                </ul>
+                <li>Limited number of computational options, often requires careful consideration when analyzing</li>
+                <li>Measured on either a <b>Nominal</b> or <b>Ordinal</b> scale.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Nominal Scale</h2>
+          <div class="left">
+            <p>Names or categories <b>with no</b> ranking or direction.  Categories are not more/less, better/worse, they just different.  Some examples include:</p>
+            <ul>  
+                <li class="fragment fade-up" data-fragment-index="0">Flower Species</li>
+                <li class="fragment fade-up" data-fragment-index="1">Zoning Categories</li>
+                <li class="fragment fade-up" data-fragment-index="2">Land cover Classification</li>
+            </ul>
+          </div>
+          <div class="r-stack">
+              <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                  <span class="helper"></span>
+                      <img src="images/03-flowers-nominal.png" width="100%"; style = "border:2px solid #555">
+              </div>
+              <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                  <span class="helper"></span>
+                      <img src="images/03-zoning.png" width="100%"; style = "border:2px solid #555">
+              </div>
+              <div class="figure fragment fade-in"  data-fragment-index="2">
+                  <span class="helper"></span>
+                      <img src="images/03-lc-class.png" width="100%"; style = "border:2px solid #555">
+              </div>
+          </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Nominal Operations</h2>
+          <div class="left">
+            <p>With nominal data we can:</p>
+            <ul>  
+                <li class="fragment">Check equivalency</li>
+                <li class="fragment">Count frequencies</li>
+                <li class="fragment"><b>Nothing else</b></li>
+            </ul>
+          </div>
+          <div class="figure">
+            <img src="images/03-nominal-opperations.png" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Ordinal Scale</h2>
+          <div class="left">
+            <p>Names or categories <b>with a</b> ranking or direction.  Categories are not more/less, better/worse, etc.  But the differences are relative, there is no way to say by "how much".  Some examples include:</p>
+            <ul>  
+                <li class="fragment fade-up" data-fragment-index="0">Spice levels</li>
+                <li class="fragment fade-up" data-fragment-index="1">Relative heights</li>
+                <li class="fragment fade-up" data-fragment-index="2">Compass Direction</li>
+            </ul>
+          </div>
+          <div class="r-stack">
+              <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                  <span class="helper"></span>
+                      <img src="images/03-spicy.jpg" width="100%"; style = "border:2px solid #555">
+              </div>
+              <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                  <span class="helper"></span>
+                      <img src="images/03-dogs-ordinal.png" height="100%"; style = "border:2px solid #555">
+              </div>
+              <div class="figure fragment fade-in"  data-fragment-index="2">
+                  <span class="helper"></span>
+                      <img src="images/03-compas.png" width="100%"; style = "border:2px solid #555">
+              </div>
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Ordinal Operations</h2>
+          <div class="left">
+            <p>With ordinal data we can:</p>
+            <ul>  
+                <li class="fragment">Check equivalency</li>
+                <li class="fragment">Count frequencies</li>
+                <li class="fragment"><b>Check order/rank</b></li>
+            </ul>
+            <p class="fragment">All the same operations as nominal data <b>+ more</b>.</p>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/03-spicy.jpg" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Ordinal Operations</h2>
+          <div class="left">
+            <p><i>Sometimes</i> we can calculate the median.</p>
+            <ul>
+              <li>Odd sets the median is the middle.</li>
+              <li>Even sets, average of the middle two.</li>
+              <li>One solution, <i>arbitrarily</i> assign a numeric score.</li>
+            </ul>
+            <p class="fragment">All the same operations as nominal data <b>+ more</b>.</p>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/03-ordinal-operatons.png" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Graded Membership</h2>
+          <div class="left">
+            <p><b>Exceptions</b> that blur the lines.</p>
+            <ul>
+                <li>Grade membership to assign categories</li>
+                <li>Where to draw the line between forest/alpine?</li>
+                <li class="fragment" data-fragment-index="0"><b>Winner take all</b>: alpine meadow</li>
+                <ul>
+                  <li class="fragment" data-fragment-index="0">45% alpine meadow</li>
+                  <li class="fragment" data-fragment-index="0">40% forest</li>
+                  <li class="fragment" data-fragment-index="0">5% bare rock</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/03-fuzzy.jpg" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Graded Membership</h2>
+          <div class="left">
+            <p>In practice, lots of qualitative data we work with, especially for <i>natural phenomena</i>, are actually graded membership.</p>
+            <ul>
+                <li><b>The downside</b>: variability within the area is lost.</li>
+            </ul>
+          </div>
+          <div class="figure">
+            <span class="helper"></span>
+            <img src="images/03-fuzzy.jpg" width="100%"; style = "border:2px solid #555">
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1 class="title">TopHat Question 2</h1>
+            <div class="question">
+                <p>Which of the following would be examples of Nominal Data? (select all that apply)</p>
+                <ul>
+                    <li>Air temperature</li>
+                    <li>Ice cream flavors</li>
+                    <li>Tree height</li>
+                    <li>Colors</li>
+                    <li>Drink sizes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Quantitative Data</h2>
+          <div class="full">
+            <p>Quantitative data is <b>Numeric</b>.  It describe the quantities associated with a phenomenon.  Key properties include:</p>
+            <ul>  
+                <li>Values separated by a meaningful unit.</li>
+                <li>More arithmetic operations possible.</li>
+                <li>Can be <b>Discrete</b> or <b>Continuous</b> numbers.</li>
+                <li>Measured on either a <b>Ratio</b> or <b>Interval</b> scale.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Kinds of Numbers</h2>
+          <div class="left">
+            <p><b>Discrete</b></p>
+            <ul>  
+                <li>Whole numbers</li> 
+                <li>Counts</li>
+                <li>Not infinitely divisible</li>
+                <li>Names in ArcGIS Pro:</li>
+                <ul>
+                    <li>Integer, Long, etc.</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="right">
+            <p><b>Continuous</b></p>
+            <ul>  
+                <li>Decimals</li>
+                <li>Measurements</li>
+                <li>Infinitely divisible</li>
+                <li>Names in ArcGIS Pro:</li>
+                <ul>
+                    <li>Float, Double, etc.</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Kinds of Numbers</h2>
+          <div class="left">
+            <p><b>Discrete</b></p>
+            <ul>  
+                <li>Countable</li>
+                <li>Examples:</li>
+                <ul>
+                    <li>Population</li>
+                    <li>Year</li>
+                    <li>"Age"</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="right">
+            <p><b>Continuous</b></p>
+            <ul>  
+                <li>Non-countable</li>
+                <li>Examples:</li>
+                <ul>
+                    <li>Temperature</li>
+                    <li>Height</li>
+                    <li>Speed</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Quantitative Data</h2>
+          <div class="full">
+            <p>Both <b>Interval</b> and <b>Ratio</b> data can consist of discrete <i>or</i> continuous numbers.  These types of quantitative data are closely related, but have one important distinction.</p>
+            <ul>  
+                <li><u>Interval</u> scales have an arbitrarily zero point, which means:</li>
+                <ul>
+                    <li><b>Can</b> have negative values</li>
+                    <li><b>Cannot</b> multiply/divide ... </li>
+                    <ul>
+                      <li>To compare the magnitude of one value to another</li>
+                      <li>Can still multiply/divide for other calculations, i.e. calculating an average</li>
+                    </ul>
+                </ul>
+                <li><u>Ratio</u> scales have a fixed, absolute zero point, which means:</li>
+                <ul>
+                    <li><b>Cannot</b> have negative values</li>
+                    <ul>
+                      <li>Absolute zero point does not imply an end point, can still have infinitely many values</li>
+                    </ul>
+                    <li><b>Can</b> multiply/divide </li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+    </section>
+    
+
+    <section>
+      <div class="container">
+        <h2 class ="header">The Difference</h2>
+        <div class="left">
+          <p><b>Celsius</b> (interval) vs. <b>Kelvin</b> (ratio).</p>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="0">&deg;C = K-273.15.</li>
+                  <li  class="fragment fade-up" data-fragment-index="1">0 &deg;C: Freezing point of water</li>
+                  <ul>                        
+                      <li  class="fragment fade-up" data-fragment-index="1">Drops below 0 &deg;C all the time</li>
+                  </ul>
+                  <li  class="fragment fade-up" data-fragment-index="2">0 K: "Absolute Zero"</li>
+                  <ul>                        
+                      <li  class="fragment fade-up" data-fragment-index="2">Physically cannot get any colder</li>
+                  </ul>
+                  <li  class="fragment fade-up" data-fragment-index="3">100 &deg;C <b>is not</b> &infin;% warmer than as 0 &deg;C</li>
+                  <ul>
+                      <li  class="fragment fade-up" data-fragment-index="3">It's actually ~ 36% warmer</li>
+                      <li  class="fragment fade-up" data-fragment-index="3">(373.15 K - 273.15 K) &frasl; 273.15 K ~ 0.36</li>
+                  </ul>
+              </ul>
+        </div>
+        <div class="figure">
+            <span class="helper"></span>
+              <img src="images/03-interval-ratio-temperature.png" width="100%"; style = "border:2px solid #555">
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h2 class ="header">Interval Scale</h2>
+        <div class="left">
+          <p>Interval data has an arbitrarily zero point.  Examples include:</p>
+          <ul>  
+              <li class="fragment fade-up" data-fragment-index="0">Calendar years</li>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="0"><i>Discrete</i> interval data</li>
+              </ul>
+              <li class="fragment fade-up" data-fragment-index="1">Temperature (in celsius)</li>
+              <ul>
+                  <li class="fragment fade-up" data-fragment-index="1"><i>Continuous</i> interval data</li>
+              </ul>
+          </ul>
+        </div>
+        <div class="r-stack">
+            <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                <span class="helper"></span>
+                  <img src="images/CalendarYears.png" width="100%"; style = "border:2px solid #555">
+            </div>
+            <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                <span class="helper"></span>
+                  <img src="images/CA_Temp.gif" width="100%"; style = "border:2px solid #555">
+            </div>
+        </div>
+      </div>
+  </section>
+  
+  <section>
+      <div class="container">
+        <h2 class ="header">Interval Scale</h2>
+        <div class="full">
+          <p>Other examples of interval data include:</p>
+              <ul>
+                  <li>ph scale (continuous)</li>
+                  <li>IQ scores (continuous)</li>
+                  <li>Times (discrete-ish)</li>
+              </ul>
+        </div>
+      </div>
+    </section>
+  
+
+    <section>
+        <div class="container">
+          <h2 class ="header">Ratio Scale</h2>
+          <div class="left">
+            <p>Ratio data has a fixed, absolute zero point.  Examples include:</p>
+            <ul>  
+                <li class="fragment fade-up" data-fragment-index="0">Population</li>
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="0"><i>Discrete</i> ratio data</li>
+                </ul>
+                <li class="fragment fade-up" data-fragment-index="1">Tree height</li>
+                <ul>
+                    <li class="fragment fade-up" data-fragment-index="1"><i>Continuous</i> ratio data</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="r-stack">
+              <div class="figure fragment fade-in-then-out" data-fragment-index="0">
+                  <span class="helper"></span>
+                    <img src="images/03-ratio-population.png" width="100%"; style = "border:2px solid #555">
+              </div>
+              <div class="figure fragment fade-in-then-out"  data-fragment-index="1">
+                  <span class="helper"></span>
+                    <img src="images/03-tree-height.gif" width="100%"; style = "border:2px solid #555">
+              </div>
+          </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+          <h2 class ="header">Ratio Scale</h2>
+          <div class="full">
+            <p>Other examples of ratio data include:</p>
+                <ul>
+                    <li>Temperature in <b>Kelvin</b> (Continuous)</li>
+                    <li>Precipitation  (Continuous)</li>
+                    <li>Area (Continuous)</li>
+                    <li>Units of time (Continuous)</li>
+                    <li>Rental cost (Discrete-ish)</li>
+                    <li>Popular Vote Totals (Discrete)</li>
+                </ul>
+          </div>
+        </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h1 class="title">TopHat Question 3</h1>
+          <div class="question">
+            <p>Match the value to the type measurement scale and type of number:</p>
+              <table>
+                <tr>
+                    <td>Length of the Howe Sound Crest Trail</td>
+                    <td>Interval (Discrete)</td>
+                </tr>
+                <tr>
+                  <td>Temperature in Fahrenheit </td>
+                  <td>Ratio (Discrete)</td>
+                </tr>
+                <tr>
+                  <td>Southern Resident Orca Population</td>
+                  <td>Ratio (Continuous)</td>
+                </tr>
+                <tr>
+                  <td>Change in Southern Resident Orca Population from 2000 to 2022</td>
+                  <td>Interval (Continuous)</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h2 class="header1">Derived Ratio</h2>
+        <div class="full">
+          <p>Sometimes called normalizing or standardizing, we calculate derived ratios to account for the influence of a confounding variable over a variable of interest. e.x. Housing affordability (<i>H<sub>a</sub></i>):</p>
+          <ul>
+            <li>   You need to account for income (<i>I</i>) to figure out how affordable rent (<i>R</i>) is:</li>
+            <ul>  
+              $$ H_a = \frac{R}{I} $$
+              <li><b>R</b>: My rent $1,450/mo</li>
+              <li><b>I</b>: I make ~$4600/mo</li>
+              <li><b><i>H<sub>a</sub></i></b>: 31.5% of my income goes to rent</li>
+              <li>Income and rent ($) are both discrete, housing affordability (%) is continuous.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+    <section>
+      <div class="container">
+        <h2 class="header1">Derived Ratio</h2>
+        <div class="left">
+          <p>In <a href="https://geos270.github.io/Module3/docs/Application.html">Lab</a>, you are going to work with two derived ratios:</p>
+          <ul>
+            <li class="fragment fade-up" data-fragment-index="0">Income and Food expenditures are correlated</li>
+            <ul>
+              <li class="fragment fade-up" data-fragment-index="0">Need to account for income if you analyze other factors</li>
+            </ul>
+            <li class="fragment fade-up" data-fragment-index="1">Population and Area are not highly correlated</li>
+            <ul>
+              <li class="fragment fade-up" data-fragment-index="1">But area definitely influences population</li>
+              <li class="fragment fade-up" data-fragment-index="1">Need to account for area to analyze other factors</li>
+            </ul>
+          </ul>
+      </div>
+      <div class="r-stack">
+        <div class="right fragment current-visible" data-fragment-index="0">
+          <span class="helper"></span>
+          <img src="images/confounder_1.png" width="800">
+        </div>
+        <div class="right fragment current-visible" data-fragment-index="1">
+          <span class="helper"></span>
+          <img src="images/confounder_2.png" width="800">
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1 class="title">TopHat Question 4</h1>
+          <div class="question">
+            <p>Speed is another example of a derived ratio.  If a line of thunderstorms travels from Brandon, MB to Winnipeg, MB (200 km) in 5 hours, what is the storm's speed in km/hr?</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Summary: Types of Data</h2>
+        <div class="full" style="text-align: center">
+          <img src="images/03-data-types.png" height="100%">
+        </div>
+      </div>
+    </section>
+
+
+   <section>
+      <div class="container">
+        <h2 class="header">Summary: Operations by Data Type</h2>
+        <div class="full" style="text-align: center;">
+                  <table>
+          <tr>
+              <td><b>Operation</b></td>
+              <td><b>Nominal</b></td>
+              <td><b>Ordinal</b></td>
+              <td><b>Interval</b></td>
+              <td><b>Ratio</b></td>
+          </tr>
+          <tr>
+              <td>Equality</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+          </tr>
+          <tr>
+              <td>Counts/Mode</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+          </tr>
+          <tr>
+              <td>Rank/Order</td>
+              <td></td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+          </tr>
+          <tr>
+              <td>Median</td>
+              <td></td>
+              <td>~</td>
+              <td>x</td>
+              <td>x</td>
+          </tr>
+          <tr>
+              <td>Add/Subtract</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td>x</td>
+          </tr>
+          <tr>
+              <td>Mean</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td>x</td>
+          </tr>
+          <tr>
+              <td>Multiply/Divide</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </section>
+
+
+
+    </div><!-- .slides -->
+
+  </div><!-- .reveal -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.03,
+      width: 1350,
+      height: 700,
+      transition: 'none',
+      plugins: [ RevealMath.MathJax2 ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
