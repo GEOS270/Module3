@@ -44,26 +44,41 @@ Map/charts/figures will be evaluated for completeness and aesthetics.
 Unless otherwise specified, numeric answers have a margin of error of 0.01, so give all responses to at least the hundredths place.
 
 
-[**1**](Application_Part1.md#create-a-new-project)
-Which projection did we choose for the **BC_Census_Data** feature dataset and why?
+[**1**](Application_Part1.md#importing-the-census-data)
+Which projection did we choose for the **BC_Census_Data** feature dataset and why?  Why can't we just work with the simply analytics data as is?
 
-[**2**](Application_Part1.md#download-the-data)
-Simply Analytics allows you to download data about businesses locations. [T/F]
 
-[**16**](Application_Part1.md#pre-processing)
+[**2**](Application_Part1.md#clip-the-bc_census_data-layer)
 We used the clip tool to ensure we don't  ____ population density in the coastal Subdivisions.
 
 * Overestimate
 * Underestimate
 * Correctly Calculate
 
-[**17**](Application_Part2.md#a-revised-classification)
+[**3**](Application_Part2.md#a-revised-classification)
 What was the reasoning behind Stats Canada updating from the old Rural/Urban to the Population Centre and Rural Area classification method?
 
-[**18**](Application_Part2.md#applying-the-classification)
+[**4**](Application_Part2.md#applying-the-classification)
 The Select by ____ tool lets us use SQL (Structured Query Language) to define expressions for querying vector data.
 
-[**19**](Application_Part3.md#plotting-relationships)
+
+[**5**](Application_Part2.md#applying-the-classification)
+What measurement scale would population density attribute be on? [Hint](content/WhatIsData.html#/18)
+
+- Nominal
+- Ordinal
+- Interval
+- Ratio
+
+[**6**](Application_Part2.md#applying-the-classification)
+What best describes the Population Center and Rural Area Classification attribute we created?
+
+- Quantitative data
+- Qualitative data
+- both
+- neither
+
+[**7**](Application_Part3.md#plotting-relationships)
 Box plots are most useful for looking at frequency distributions. [T/F]
 
 [**20**](Application_Part3.md#plotting-relationships)

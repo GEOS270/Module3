@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Data Classification
-parent: Application
-nav_order: 3
+parent: Lab Assignment
+nav_order: 2
 ---
 
 # Data Classification
@@ -33,12 +33,19 @@ Statistics Canada Now uses the **Population Center and Rural Area Classification
 
 # Applying the Classification
 
-Your task is to apply the **Population Center and Rural Area Classification** scheme (see table above).  You can watch the video below for reference, which shows you how to apply the old **Urban/Rural** scheme. **Note**: You do not need to apply the old classification scheme, I use this example as a reference.  All your answers and your for the lab should be drawn from the **New** classification scheme.  The general steps for classifying the data are:
+Your task is to apply the **Population Center and Rural Area Classification** scheme (see table above).  You can watch the video below for reference, which shows you how to apply the old **Urban/Rural** scheme. 
+
+## **Note**
+{: .no_toc }
+
+* The video is from a slightly dated version of the lab, the steps are the same but some of the file names may look a bit different, and it was recorded using an older version of ArcGIS Pro.
+
+* You do not need to apply the old classification scheme, I use this example as a reference.  All your answers and uploads for the lab should be drawn from the **New** classification scheme.  The general steps for classifying the data are:
 
 
 **1**{: .label .label-red } Calculate population density.
 
-* You can refer to the exercise we did as part of [Module 1](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html) for help.
+* You can refer to the exercise we did as part of [Module 2](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html) for help.
 
 
 **2**{: .label .label-red } Create a field and populate it using select by attribute, following the **Population Center and Rural Area Classification** scheme.

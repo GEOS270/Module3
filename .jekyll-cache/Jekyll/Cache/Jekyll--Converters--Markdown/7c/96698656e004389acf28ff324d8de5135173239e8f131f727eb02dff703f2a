@@ -1,0 +1,205 @@
+I"� <h1 class="no_toc" id="data-download-and-setup">Data Download and Setup</h1>
+
+<ol id="markdown-toc">
+  <li><a href="#create-a-new-project" id="markdown-toc-create-a-new-project">Create a New Project</a>    <ol>
+      <li><a href="#download-the-bc-boundary-file" id="markdown-toc-download-the-bc-boundary-file">Download the BC Boundary File</a></li>
+    </ol>
+  </li>
+  <li><a href="#downloading-census-data" id="markdown-toc-downloading-census-data">Downloading Census Data</a></li>
+  <li><a href="#pre-processing" id="markdown-toc-pre-processing">Pre-Processing</a>    <ol>
+      <li><a href="#importing-the-census-data" id="markdown-toc-importing-the-census-data">Importing the Census Data</a></li>
+      <li><a href="#rename-the-variables" id="markdown-toc-rename-the-variables">Rename the Variables</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h1 id="create-a-new-project">Create a New Project</h1>
+
+<p>Open up AcrGIS Pro and create a new project.  You can reference the same steps outlined in <a href="https://geos270.github.io/Module1/docs/Application_Part3_0.html">Module 1</a> for help creating a project.</p>
+
+<p><strong class="label label-yellow">1</strong> Name the project <strong>BC_Food_Cost</strong></p>
+
+<p><strong class="label label-yellow">2</strong> Create a new “Feature Dataset” called <strong>BC_Census_Data</strong></p>
+<ul>
+  <li>Make sure the feature dataset is in the “NAD 1983 BC Environment Albers” projection</li>
+  <li>See the video below for guidance</li>
+</ul>
+
+<div style="overflow: hidden;
+  padding-top: 56.25%;
+  position: relative">
+  <iframe src="content/videos/Setup.mp4" title="Processes" scrolling="no" frameborder="0" style="border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;">
+   <p>Your browser does not support iframes.</p>
+ </iframe>
+</div>
+<p><a href="content/videos/Setup.mp4" target="_blank">View Image in New Tab</a></p>
+
+<h2 id="download-the-bc-boundary-file">Download the BC Boundary File</h2>
+
+<p><strong class="label label-yellow">3</strong> Click the button below to download the BC_Boundary.zip file.</p>
+<ul>
+  <li>Extract the contents of the BC_Boundary.zip file to your newly created <strong>BC_Food_Cost</strong> project folder.</li>
+</ul>
+
+<p><a href="https://github.com/GEOS270/Module3/raw/main/data/BC_Boundary.zip" class="btn btn-blue">Download</a></p>
+
+<p><img src="content/images/Extract.png" widht="200px" /></p>
+
+<p><strong class="label label-yellow">4</strong> Import the <strong>BC_Boundary</strong> shapefile to you <strong>BC_Census_Data</strong> feature dataset.</p>
+<ul>
+  <li>Start by adding the BC_Boundary.shp to the map
+    <ul>
+      <li>Check the <strong>Spatial Reference System</strong></li>
+      <li>Check the <strong>Attribute Table</strong></li>
+      <li>Remove it from the Table of Contents</li>
+    </ul>
+  </li>
+  <li>Right click the <strong>BC_Census_Data</strong> feature dataset
+    <ul>
+      <li>Select: Import &gt; Feature Class(es)</li>
+      <li>Choose BC_Boundary.shp then click Okay</li>
+    </ul>
+  </li>
+  <li>The newly import BC_Boundary Feature class should automatically be added to your table of contents
+    <ul>
+      <li>Inspect the coordinate system to see if it changed</li>
+      <li>You can then delete the original shapefile</li>
+    </ul>
+  </li>
+</ul>
+
+<div style="overflow: hidden;
+  padding-top: 56.25%;
+  position: relative">
+  <iframe src="content/videos/Import.mp4" title="Processes" scrolling="no" frameborder="0" style="border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;">
+   <p>Your browser does not support iframes.</p>
+ </iframe>
+</div>
+<p><a href="content/videos/Import.mp4" target="_blank">View Image in New Tab</a></p>
+
+<hr />
+
+<h1 id="downloading-census-data">Downloading Census Data</h1>
+
+<p>We are gong to download population estimates for 2021 using <a href="https://resources.library.ubc.ca/page.php?id=1044">Simply Analytics</a>.  You can also find it by Googling “Simply Analytics UBC Library”.  One of the first results will be the Library Indexes &amp; Databases page.</p>
+
+<p><strong class="label label-red">1</strong> On the library page, click “Connect to the Resource”.  This will redirect you to the simply analytics logon page.</p>
+
+<p><strong class="label label-red">2</strong> Click the link to create a new account.  <strong>Note</strong> you have to connect via the library, otherwise you will be need to login via the UBC VPN first.</p>
+
+<p><img src="content/images/connect.png" /></p>
+
+<p>Once you’re setup, you can download the data.  The video below walks you through using the simply analytics interface.  We are going to download the following data:</p>
+
+<ul>
+  <li><strong>Total Population (2021)</strong></li>
+  <li><strong>Median Household Income (2021)</strong></li>
+  <li><strong>Average Total Expenditures on Food (2021)</strong>.</li>
+</ul>
+
+<p>The steps outlined in the video are:</p>
+
+<p><strong class="label label-blue">1</strong> Create your project to query data.</p>
+
+<ul>
+  <li>Select study area and inspect default variables.</li>
+  <li>Explore the interface.</li>
+  <li>Watch intro video on Simply Analytics.</li>
+</ul>
+
+<p><strong class="label label-blue">2</strong> Query additional variables.</p>
+
+<ul>
+  <li>Search for food cost.</li>
+  <li>Make sure to select the correct variable.</li>
+</ul>
+
+<p><strong class="label label-blue">3</strong> Export the data.</p>
+
+<ul>
+  <li>Save the project so its easy to come back if needed.</li>
+  <li>Export the shapefile.
+    <ul>
+      <li>Make sure all variables are checked.</li>
+      <li>Make sure to export <strong>Census Subdivisions</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong class="label label-blue">4</strong> Check your email for the download link.  Clicking it will downloaded a .zip folder with a name that starts with “SimplyAnalytics_Shapefiles_” followed by a bunch of gibberish</p>
+
+<ul>
+  <li>Extract the contents of SimplyAnalytics_Shapefiles .zip file to your newly created <strong>BC_Food_Cost</strong> project folder as well.</li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEtLTafGxbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<hr />
+
+<h1 id="pre-processing">Pre-Processing</h1>
+
+<h2 id="importing-the-census-data">Importing the Census Data</h2>
+
+<p>We have to do a few things to the data to make sure everything setup and ready so we can conduct our analysis.</p>
+
+<p><strong class="label label-green">1</strong> Import the <strong>SimplyAnalytics_Shapefiles</strong> using the same steps <a href="#download-the-bc-boundary-file">as above</a>.</p>
+
+<ul>
+  <li>
+    <p>Make sure to check the <strong>Spatial Reference System</strong> before and after the import.  Think about:</p>
+
+    <ul>
+      <li>What coordinate system the census data came in from Simply Analytics?</li>
+      <li>What coordinate system we’re using and <strong>why</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong class="label label-green">2</strong> Rename the <strong>SimplyAnalytics_Shapefiles</strong> as <strong>BC_Census_Data</strong></p>
+
+<ul>
+  <li>Right click the SimplyAnalytics_Shapefiles and select &gt; Rename</li>
+</ul>
+
+<p><img src="content/images/Rename.png" height="50%" /></p>
+
+<h2 id="rename-the-variables">Rename the Variables</h2>
+
+<ul>
+  <li>Rename the variables.
+    <ul>
+      <li>Data from simply analytics comes with generic column headers that can be confusing.</li>
+      <li>The simply analytics data comes with a text file containing header names you can reference to give them more helpful names.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong class="label label-green">3</strong> Clip the census subdivisions by the BC boundary file.</p>
+
+<ul>
+  <li>The census subdivision from Simply Analytics look pretty funky along the coast.
+    <ul>
+      <li>We can use the <strong>Clip</strong> tool to cut the layer down to size.</li>
+      <li>Think about what projection we’re using and <strong>why</strong></li>
+    </ul>
+  </li>
+  <li>Rename the variables
+    <ul>
+      <li>Data from simply analytics comes with generic column headers that can be confusing</li>
+      <li>The simply analytics data comes with a text file containing header names you can reference to give them more helpful names</li>
+    </ul>
+  </li>
+</ul>
+:ET

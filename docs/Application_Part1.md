@@ -40,9 +40,47 @@ Open up AcrGIS Pro and create a new project.  You can reference the same steps o
 </div>
 <a href="content/videos/Setup.mp4" target="_blank">View Image in New Tab</a>
 
-# Download the BC Boundary File
+## Download the BC Boundary File
 
-# Download the Census Data
+**3**{: .label .label-yellow } Click the button below to download the BC_Boundary.zip file.
+* Extract the contents of the BC_Boundary.zip file to your newly created **BC_Food_Cost** project folder.
+
+[Download](https://github.com/GEOS270/Module3/raw/main/data/BC_Boundary.zip){: .btn .btn-blue }
+
+
+<img src="content/images/Extract.png" style = "border:1px solid black; width:75%;">
+
+**4**{: .label .label-yellow } Import the **BC_Boundary** shapefile to your **BC_Census_Data** feature dataset.
+* Start by adding the BC_Boundary.shp to the map
+	* Check the **Spatial Reference System**
+	* Check the **Attribute Table**
+	* Remove it from the Table of Contents
+* Right click the **BC_Census_Data** feature dataset
+	* Select: Import > Feature Class(es)
+	* Choose BC_Boundary.shp then click Okay
+* The newly import BC_Boundary Feature class should automatically be added to your table of contents
+	* Inspect the coordinate system to see if it changed
+	* You can then delete the original shapefile
+
+<div style="overflow: hidden;
+  padding-top: 56.25%;
+  position: relative">
+  <iframe src="content/videos/Import.mp4" title="Processes" scrolling="no" frameborder="0"
+    style="border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;">
+   <p>Your browser does not support iframes.</p>
+ </iframe>
+</div>
+<a href="content/videos/Import.mp4" target="_blank">View Image in New Tab</a>
+
+
+---
+
+# Downloading Census Data
 
 We are gong to download population estimates for 2021 using [Simply Analytics](https://resources.library.ubc.ca/page.php?id=1044).  You can also find it by Googling "Simply Analytics UBC Library".  One of the first results will be the Library Indexes & Databases page.
 
@@ -80,10 +118,9 @@ The steps outlined in the video are:
 	* Make sure to export **Census Subdivisions**.
 
 
-**4**{: .label .label-blue } Import the Data.
+**4**{: .label .label-blue } Check your email for the download link.  Clicking it will downloaded a .zip folder with a name that starts with "SimplyAnalytics_Shapefiles_" followed by a bunch of gibberish
 
-* Check your email for the download link.  Extract the Simply Analytics shapefile to the **BC_Food_Cost** project folder.
-
+* Extract the contents of SimplyAnalytics_Shapefiles .zip file to your newly created **BC_Food_Cost** project folder as well.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eEtLTafGxbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -91,27 +128,40 @@ The steps outlined in the video are:
 
 # Pre-Processing
 
+## Importing the Census Data
+
 We have to do a few things to the data to make sure everything setup and ready so we can conduct our analysis.
 
-The steps outlined in the video are:
+**1**{: .label .label-green } Import the **SimplyAnalytics_Shapefiles** using the same steps [as above](#download-the-bc-boundary-file) and name it **BC_Census_Data**
 
-**1**{: .label .label-green } Make sure the data is in the proper projection!
+* Make sure to check the **Spatial Reference System** before and after the import.  Think about:
 
-* Import the census data into the project feature dataset.
-	* Think about what projection we're using and **why**.
-* Rename the variables.
-	* Data from simply analytics comes with generic column headers that can be confusing.
-	* The simply analytics data comes with a text file containing header names you can reference to give them more helpful names.
+	* What coordinate system the census data came in from Simply Analytics?
+	* What coordinate system we're using and **why**.
+* You can delete the original SimplyAnalytics_Shapefiles, but **Do Not** delete **variable_names.txt**, we still need it!
+
+**2**{: .label .label-green } Rename the **SimplyAnalytics_Shapefiles** as **BC_Census_Data**
+
+* Right click the SimplyAnalytics_Shapefiles and select > Rename
+
+<img src="content/images/Rename.png" style = "border:1px solid black; width:75%;">
+
+## Rename the Variables
 
 
-**3**{: .label .label-green } Clip the census subdivisions by the BC boundary file.
+**3**{: .label .label-green } Rename the Attributes in the BC_Census_Data feature class.
+* Data from simply analytics comes with generic column headers that can be confusing.
+* The simply analytics data comes with a text file containing header names you can reference to give them more helpful names.
 
-* The census subdivision from Simply Analytics look pretty funky along the coast.
-	* We can use the **Clip** tool to cut the layer down to size.
-	* Think about what projection we're using and **why**
-* Rename the variables
-	* Data from simply analytics comes with generic column headers that can be confusing
-	* The simply analytics data comes with a text file containing header names you can reference to give them more helpful names
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ww5EynjJzRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YRm8Bv958gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Clip the BC_Census_Data Layer
 
+**4**{: .label .label-green } Use the **Clip Tool** to get the BC_Census_Data layer to show the true boundaries of the census subdivisions by using the BC boundary file to remove areas of ocean.
+
+* The census subdivision from Simply Analytics look pretty funky along the coast and we can use the **Clip** tool to cut the layer down to size.
+	* Use the BC_Census_Data is the **Input Layer**
+	* Use the BC_Boundary as the **Clip Layer**
+	* Name the output **BC_Subdivisions_2021_Clip**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GGX8_gcS5Jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
