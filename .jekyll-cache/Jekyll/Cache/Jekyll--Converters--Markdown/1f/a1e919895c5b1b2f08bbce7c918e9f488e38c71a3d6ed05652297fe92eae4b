@@ -1,0 +1,48 @@
+I"ò<h1 class="no_toc" id="using-data-classification-to-visualize-patterns-the-rural-urban-divide">Using Data Classification to Visualize Patterns: The Rural Urban Divide</h1>
+
+<ol id="markdown-toc">
+  <li><a href="#research-question" id="markdown-toc-research-question">Research Question</a></li>
+  <li><a href="#workflow" id="markdown-toc-workflow">Workflow</a></li>
+</ol>
+
+<hr />
+
+<h1 id="research-question">Research Question</h1>
+
+<p>There are distinct social, political, and economic differences between Urban and Rural communities in BC.  Today we are going to investigate if there is a difference in the cost of food in Rural and Urban areas.  Specifically, portion of their income people spend on food.   We are going to define Rural and Urban based on total population <strong>and</strong> population density.</p>
+
+<!-- # Download the Project
+
+
+[Download](https://raw.githubusercontent.com/June-Skeeter/Module3_GEOS270/main/data/Module3.zip){: .btn .btn-blue }
+
+I've already done most of this for you to save you a bit of time.  You can download it [here](https://raw.githubusercontent.com/June-Skeeter/Module3_GEOS270/main/data/Module3.zip).  Extract the Module3 project folder to your working directory (eg. C:/Temp).  Open it, and double click the Module3.aprx file to open your project. **Note** this module used to be Module #4, so some filenames in the videos say "Module 4".  The names in the project folder have been updated, so don't be concerned. -->
+
+<h1 id="workflow">Workflow</h1>
+
+<p>1) Download the BC boundary file and Canadian Census Data</p>
+
+<ul>
+  <li>I am providing you will a boundary file for BC, youâ€™ll see it linked on the next page.</li>
+  <li>Use Simply Analytics to query and download Canadian Census data.</li>
+</ul>
+
+<p>2) Pre-processing</p>
+
+<ul>
+  <li>Make sure your data is projected</li>
+</ul>
+
+<p>3) Classify Data</p>
+
+<ul>
+  <li>Use the Updated Stats Canada urban/rural classification scheme</li>
+</ul>
+
+<p>4) Visualize Data</p>
+
+<ul>
+  <li>Create charts to display your results</li>
+</ul>
+
+:ET

@@ -1,0 +1,122 @@
+I"}<h1 class="no_toc" id="data-download-and-setup">Data Download and Setup</h1>
+
+<ol id="markdown-toc">
+  <li><a href="#create-a-new-project" id="markdown-toc-create-a-new-project">Create a New Project</a></li>
+  <li><a href="#login-to-simply-analytics" id="markdown-toc-login-to-simply-analytics">Login to Simply Analytics</a>    <ol>
+      <li><a href="#download-the-data" id="markdown-toc-download-the-data">Download the Data</a></li>
+    </ol>
+  </li>
+  <li><a href="#pre-processing" id="markdown-toc-pre-processing">Pre-Processing</a></li>
+</ol>
+
+<hr />
+
+<h1 id="create-a-new-project">Create a New Project</h1>
+
+<p>Open up AcrGIS Pro and create a new project, using the same steps outline in <a href="https://geos270.github.io/Module1/docs/Application_Part3_0.html">Module 1</a></p>
+
+<p><strong class="label label-yellow">1</strong> Name the project <strong>BC_Food_Cost</strong></p>
+
+<p><strong class="label label-yellow">2</strong> Create a new “Feature Dataset” called <strong>BC_Census_Data</strong></p>
+
+<h1 id="login-to-simply-analytics">Login to Simply Analytics</h1>
+
+<p>We are gong to download population estimates for 2021 using <a href="https://resources.library.ubc.ca/page.php?id=1044">Simply Analytics</a>.  You can also find it by Googling “Simply Analytics UBC Library”.  One of the first results will be the Library Indexes &amp; Databases page.</p>
+
+<p><strong class="label label-red">1</strong> On the library page, click “Connect to the Resource”.  This will redirect you to the simply analytics logon page.</p>
+
+<p><strong class="label label-red">2</strong> Click the link to create a new account.  <strong>Note</strong> you have to connect via the library, otherwise you will be need to login via the UBC VPN first.</p>
+
+<p><img src="content/images/connect.png" /></p>
+
+<h2 id="download-the-data">Download the Data</h2>
+
+<p>Once you’re setup, you can download the data.  The video below walks you through using the simply analytics interface.  We are going to download the following data:</p>
+
+<ul>
+  <li><strong>Total Population (2021)</strong></li>
+  <li><strong>Median Household Income (2021)</strong></li>
+  <li><strong>Average Total Expenditures on Food (2021)</strong>.</li>
+</ul>
+
+<p>The steps outlined in the video are:</p>
+
+<p><strong class="label label-blue">1</strong> Create your project to query data.</p>
+
+<ul>
+  <li>Select study area and inspect default variables.</li>
+  <li>Explore the interface.</li>
+  <li>Watch intro video on Simply Analytics.</li>
+</ul>
+
+<p><strong class="label label-blue">2</strong> Query additional variables.</p>
+
+<ul>
+  <li>Search for food cost.</li>
+  <li>Make sure to select the correct variable.</li>
+</ul>
+
+<p><strong class="label label-blue">3</strong> Export the data.</p>
+
+<ul>
+  <li>Save the project so its easy to come back if needed.</li>
+  <li>Export the shapefile.
+    <ul>
+      <li>Make sure all variables are checked.</li>
+      <li>Make sure to export <strong>Census Subdivisions</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong class="label label-blue">4</strong> Import the Data.</p>
+
+<ul>
+  <li>Check your email for the download link.  Extract the Simply Analytics shapefile to the <strong>Module3/Current_Year_Estimate</strong> folder.</li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEtLTafGxbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<hr />
+
+<h1 id="pre-processing">Pre-Processing</h1>
+
+<p>We have to do a few things to the data to make sure everything setup and ready so we can conduct our analysis.</p>
+
+<p>The steps outlined in the video are:</p>
+
+<p><strong class="label label-green">1</strong> Make sure the data is in the proper projection!</p>
+
+<ul>
+  <li>Import the census data into the project feature dataset.
+    <ul>
+      <li>Think about what projection we’re using and <strong>why</strong>.</li>
+    </ul>
+  </li>
+  <li>Rename the variables.
+    <ul>
+      <li>Data from simply analytics comes with generic column headers that can be confusing.</li>
+      <li>The simply analytics data comes with a text file containing header names you can reference to give them more helpful names.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong class="label label-green">3</strong> Clip the census subdivisions by the BC boundary file.</p>
+
+<ul>
+  <li>The census subdivision from Simply Analytics look pretty funky along the coast.
+    <ul>
+      <li>We can use the <strong>Clip</strong> tool to cut the layer down to size.</li>
+      <li>Think about what projection we’re using and <strong>why</strong></li>
+    </ul>
+  </li>
+  <li>Rename the variables
+    <ul>
+      <li>Data from simply analytics comes with generic column headers that can be confusing</li>
+      <li>The simply analytics data comes with a text file containing header names you can reference to give them more helpful names</li>
+    </ul>
+  </li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YRm8Bv958gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+:ET

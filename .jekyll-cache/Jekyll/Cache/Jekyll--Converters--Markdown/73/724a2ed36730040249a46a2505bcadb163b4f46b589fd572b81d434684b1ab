@@ -1,0 +1,194 @@
+I"q<h1 id="module-3-quiz">Module 3 Quiz</h1>
+
+<p>You can submit your answers to these questions via the Module 3 Quiz on Canvas.  Questions are listed here with hyperlinks to the relevant section of the lab if you need help finding answers.</p>
+
+<h2 id="rubric">Rubric</h2>
+
+<p>Written answers and maps will be evaluated using the rubric below and your TA will provide brief comments where applicable.</p>
+
+<ul>
+  <li>If you need more feedback you can follow up with your TA via email or in lab.</li>
+  <li>Categories are just general guides
+    <ul>
+      <li>Your TA may assign scores between these levels</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Written Answers</th>
+      <th>Map/Chart Submissions</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Missing</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td>Insufficient</td>
+      <td>Missing major key points or serious logical flaws</td>
+      <td>Serious errors in analysis, missing data, or major stylistic issues</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td>Below Expectations</td>
+      <td>Missing a few key points or minor logical flaws</td>
+      <td>Minor errors in analysis or multiple stylistic issues</td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <td>Meets Expectations</td>
+      <td>Hits key points and mostly well constructed</td>
+      <td>Error free analysis, minor stylistic issue</td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <td>Exceeds Expectations</td>
+      <td>Clearly thought out, concise, and astute</td>
+      <td>Error free analysis and clean, aesthetically pleasing map</td>
+      <td>100%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="written-answers">Written Answers</h3>
+
+<p>Written answers can be brief but they should adequately answer the question.</p>
+
+<ul>
+  <li>Bullet point format is okay <strong>unless otherwise specified</strong></li>
+</ul>
+
+<h3 id="file-submissions">File Submissions</h3>
+
+<p>Map/charts/figures will be evaluated for completeness and aesthetics.</p>
+
+<ul>
+  <li>Files should be saved as using the file type specified (.pdf, .png, etc.)
+    <ul>
+      <li>Make sure to double check the file before uploading!</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="lab-application-questions">Lab Application Questions</h1>
+
+<p>Unless otherwise specified, numeric answers have a margin of error of 0.01, so give all responses to at least the hundredths place.</p>
+
+<p><a href="Application_Part1.md#create-a-new-project"><strong>1</strong></a>
+Which projection did we choose for the <strong>BC_Census_Data</strong> feature dataset and why?</p>
+
+<p><a href="Application_Part1.md#download-the-data"><strong>2</strong></a>
+Simply Analytics allows you to download data about businesses locations. [T/F]</p>
+
+<p><a href="Application_Part1.md#pre-processing"><strong>16</strong></a>
+We used the clip tool to ensure we don’t  <em>__</em> population density in the coastal Subdivisions.</p>
+
+<ul>
+  <li>Overestimate</li>
+  <li>Underestimate</li>
+  <li>Correctly Calculate</li>
+</ul>
+
+<p><a href="Application_Part2.md#a-revised-classification"><strong>17</strong></a>
+What was the reasoning behind Stats Canada updating from the old Rural/Urban to the Population Centre and Rural Area classification method?</p>
+
+<p><a href="Application_Part2.md#applying-the-classification"><strong>18</strong></a>
+The Select by <em>__</em> tool lets us use SQL (Structured Query Language) to define expressions for querying vector data.</p>
+
+<p><a href="Application_Part3.md#plotting-relationships"><strong>19</strong></a>
+Box plots are most useful for looking at frequency distributions. [T/F]</p>
+
+<p><a href="Application_Part3.md#plotting-relationships"><strong>20</strong></a>
+In which Population Centre and Rural Area class does the the largest proportion of BC’s population live?</p>
+
+<ul>
+  <li>Large Urban Population Centre</li>
+  <li>Rural</li>
+  <li>Small Population Centre</li>
+  <li>Medium Population Centre</li>
+</ul>
+
+<p><a href="Application_Part3.md#plotting-relationships"><strong>21</strong></a>
+What  percent  of BC’s overall population lives in Rural Areas?  Round your answer to the nearest percent.  <em>Hint</em> Sum the four classes to get the total population.</p>
+
+<p><a href="Application_Part3.md#plotting-relationships"><strong>22</strong></a>
+What is the median value for the percentage of income that people in Rural areas spend on food?  Round to the nearest tenth percent.</p>
+
+<p><a href="Application_Part3.md#benefits-of-data-classification"><strong>23</strong></a>
+How does classifying the data help us reveal patterns compared to what we see in the scatter plot?  Does the r2 score indicate a relationship in the scatter plot?  What conclusions can you draw about the proportion of income spent on food by people in different regions from looking at the box plot?</p>
+
+<p><a href="Application_Part3.md#stylizing-your-visualizations"><strong>24</strong></a>
+Submit your Bar Chart.</p>
+
+<p><a href="Application_Part3.md#stylizing-your-visualizations"><strong>25</strong></a>
+Submit your Box plot.</p>
+
+<!-- # Lecture Content Questions 
+
+[**1**](Content_Part1.md)
+Which type of visualization would be *best suited* to look at a frequency distribution?
+
+- Scatter plot
+- Pie chart
+- Histogram
+- Bar chart
+- Box plot
+- Line plot
+- Cartogram
+
+[**2**](Content_Part1.md)
+When a histogram shows a long tail with a handful of outliers, we say the distribution is skewed because deviates from the _______ distribution.
+
+[**3**](Content_Part1.md)
+Which unsupervised map classification method in ArcGIS Pro will usually provide you with the best results?
+
+- Defined interval
+- Equal interval
+- Natural breaks
+- Manual breaks
+
+[**4**](Content_Part1.md)
+Supervised classification methods are always better than unsupervised because humans are smarter than computers. [T/F]
+
+
+[**5**](Content_Part1.md)
+Unsupervised classification methods require no input from the user, the computer does all the work. [T/F]
+
+[**6**](Content_Part2.md)
+Briefly, explain the differences between Supervised and Unsupervised classification methods.
+
+[**7**](Content_Part1.md)
+Random forests require a user to provide _______ classes.
+
+[**8**](Content_Part2.md)
+It is important to avoid using sequential color pallets or graduated symbols for _____ data because they can imply a ranking/direction, even though this type of data has no rank/direction.
+
+[**9**](Content_Part2.md)
+Diverging color maps are great for showing deviations from a mean value. [T/F]
+
+[**10**](Content_Part2.md)
+Sequential color maps use gradations of different shades (light/dark) of the same color. [T/F]
+
+[**11**](Content_Part2.md)
+The best maps pack the most amount of information into the least amount of space. [T/F]
+
+[**12**](Content_Part2.md)
+Every map should always have a north arrow. [T/F]
+
+[**13**](Content_Part2.md)
+This type of colorblindness impacts ~ 4.5% of the human population.
+
+- Red-Green
+- Blue-Green
+- Red-Blue
+- Full Spectrum
+ -->
+:ET

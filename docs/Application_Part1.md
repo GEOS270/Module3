@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Data Download and Setup 
-parent: Application
-nav_order: 2
+parent: Lab Assignment
+nav_order: 1
 ---
 
 # Data Download and Setup
@@ -13,8 +13,36 @@ nav_order: 2
 
 ---
 
+# Create a New Project
 
-# Login to Simply Analytics
+Open up AcrGIS Pro and create a new project.  You can reference the same steps outlined in [Module 1](https://geos270.github.io/Module1/docs/Application_Part3_0.html) for help creating a project.
+
+
+**1**{: .label .label-yellow } Name the project **BC_Food_Cost**
+
+**2**{: .label .label-yellow } Create a new "Feature Dataset" called **BC_Census_Data**
+* Make sure the feature dataset is in the "NAD 1983 BC Environment Albers" projection
+* See the video below for guidance
+
+
+<div style="overflow: hidden;
+  padding-top: 56.25%;
+  position: relative">
+  <iframe src="content/videos/Setup.mp4" title="Processes" scrolling="no" frameborder="0"
+    style="border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;">
+   <p>Your browser does not support iframes.</p>
+ </iframe>
+</div>
+<a href="content/videos/Setup.mp4" target="_blank">View Image in New Tab</a>
+
+# Download the BC Boundary File
+
+# Download the Census Data
 
 We are gong to download population estimates for 2021 using [Simply Analytics](https://resources.library.ubc.ca/page.php?id=1044).  You can also find it by Googling "Simply Analytics UBC Library".  One of the first results will be the Library Indexes & Databases page.
 
@@ -24,9 +52,12 @@ We are gong to download population estimates for 2021 using [Simply Analytics](h
 
 <img src="content/images/connect.png">
 
-## Download the Data
 
-Once you're setup, you can download the data.  The video below walks you through using the simply analytics interface.  We are going to download the following data: **Total Population (2021)**, **Median Household Income (2021)**, and **Average Total Expenditures on Food (2021)**.  
+Once you're setup, you can download the data.  The video below walks you through using the simply analytics interface.  We are going to download the following data: 
+
+* **Total Population (2021)**
+* **Median Household Income (2021)**
+* **Average Total Expenditures on Food (2021)**.  
 
 The steps outlined in the video are:
 
@@ -51,7 +82,7 @@ The steps outlined in the video are:
 
 **4**{: .label .label-blue } Import the Data.
 
-* Check your email for the download link.  Extract the Simply Analytics shapefile to the **Module3/Current_Year_Estimate** folder.
+* Check your email for the download link.  Extract the Simply Analytics shapefile to the **BC_Food_Cost** project folder.
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eEtLTafGxbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

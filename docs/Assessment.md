@@ -1,44 +1,97 @@
 ---
 layout: default
 title: Module Quiz
-nav_order: 4
+nav_order: 3
 ---
 
-# Assessment
+# Module 3 Quiz
 
-You can use the submit your answers to the Assessment via the Module 2 Quiz on Canvas.  Questions are listed here with hyperlinks to the relevant section of the module if you need help finding answers.  If you would like a .pdf version of the instructions, you can it download it [here](https://raw.githubusercontent.com/June-Skeeter/Module2_GEOS270/main/docs/Assessment.pdf).
+You can submit your answers to these questions via the Module 3 Quiz on Canvas.  Questions are listed here with hyperlinks to the relevant section of the lab if you need help finding answers.
+
+## Rubric
+
+Written answers and maps will be evaluated using the rubric below and your TA will provide brief comments where applicable.
+
+* If you need more feedback you can follow up with your TA via email or in lab.
+* Categories are just general guides
+    * Your TA may assign scores between these levels
 
 
-## Written Answers & File Uploads
+|      Category      |                   Written Answers                |                 Map/Chart Submissions                             |Score|
+|--------------------|--------------------------------------------------|-------------------------------------------------------------------|-----|
+|Missing             |N/A                                               |N/A                                                                |0%   |
+|Insufficient        |Missing major key points or serious logical flaws |Serious errors in analysis, missing data, or major stylistic issues|25%  |
+|Below Expectations  |Missing a few key points or minor logical flaws   |Minor errors in analysis or multiple stylistic issues              |50%  |
+|Meets Expectations  |Hits key points and mostly well constructed       |Error free analysis, minor stylistic issue                         |75%  |
+|Exceeds Expectations|Clearly thought out, concise, and astute          |Error free analysis and clean, aesthetically pleasing map          |100% |
 
-Written answers should be brief but they should adequately answer the question.  Bullet point format is sufficient unless otherwise specified.  All written answers & charts will be evaluated following this general rubrics below.
+### Written Answers 
 
-* Scores & categories are general guides, you TA may assign scores between these levels
-* Your TA will provide brief comments where applicable, if you need more feedback you can follow up with your TA.
+Written answers can be brief but they should adequately answer the question.
 
-**Written Answer Rubric**
+* Bullet point format is okay **unless otherwise specified**
 
-|Score|      Category      |                             Details                              |
-|-----|--------------------|------------------------------------------------------------------|
-|0%   |Missing             |N/A                                                               |
-|40%  |Insufficient        |Minimal effort, missing major key points, or serious logical flaws|
-|60%  |Below Expectations  |Missing a few key points or minor logical flaws                   |
-|80%  |Met Expectations    |Hits key points and mostly well constructed                       |
-|100% |Exceeds Expectations|Clearly thought out, concise, and astute                          |
+### File Submissions
 
-**Charts Rubric**
+Map/charts/figures will be evaluated for completeness and aesthetics.
 
-|Score|      Category      |                             Details                               |
-|-----|--------------------|-------------------------------------------------------------------|
-|0%   |Missing             |N/A                                                                |
-|40%  |Insufficient        |Serious errors in analysis, missing data, or major stylistic issues|
-|60%  |Below Expectations  |Minor errors in analysis or multiple stylistic issues              |
-|80%  |Met Expectations    |Error free analysis, minor stylistic issue                         |
-|100% |Exceeds Expectations|Error free analysis and clean, aesthetically pleasing map/chart    |
+* Files should be saved as using the file type specified (.pdf, .png, etc.)
+    * Make sure to double check the file before uploading!
 
----
 
-# Lecture Content Questions 
+# Lab Application Questions 
+
+Unless otherwise specified, numeric answers have a margin of error of 0.01, so give all responses to at least the hundredths place.
+
+
+[**1**](Application_Part1.md#create-a-new-project)
+Which projection did we choose for the **BC_Census_Data** feature dataset and why?
+
+[**2**](Application_Part1.md#download-the-data)
+Simply Analytics allows you to download data about businesses locations. [T/F]
+
+[**16**](Application_Part1.md#pre-processing)
+We used the clip tool to ensure we don't  ____ population density in the coastal Subdivisions.
+
+* Overestimate
+* Underestimate
+* Correctly Calculate
+
+[**17**](Application_Part2.md#a-revised-classification)
+What was the reasoning behind Stats Canada updating from the old Rural/Urban to the Population Centre and Rural Area classification method?
+
+[**18**](Application_Part2.md#applying-the-classification)
+The Select by ____ tool lets us use SQL (Structured Query Language) to define expressions for querying vector data.
+
+[**19**](Application_Part3.md#plotting-relationships)
+Box plots are most useful for looking at frequency distributions. [T/F]
+
+[**20**](Application_Part3.md#plotting-relationships)
+In which Population Centre and Rural Area class does the the largest proportion of BC's population live?
+
+- Large Urban Population Centre
+- Rural
+- Small Population Centre
+- Medium Population Centre
+
+[**21**](Application_Part3.md#plotting-relationships)
+What  percent  of BC's overall population lives in Rural Areas?  Round your answer to the nearest percent.  *Hint* Sum the four classes to get the total population.
+
+[**22**](Application_Part3.md#plotting-relationships)
+What is the median value for the percentage of income that people in Rural areas spend on food?  Round to the nearest tenth percent.
+
+[**23**](Application_Part3.md#benefits-of-data-classification)
+How does classifying the data help us reveal patterns compared to what we see in the scatter plot?  Does the r2 score indicate a relationship in the scatter plot?  What conclusions can you draw about the proportion of income spent on food by people in different regions from looking at the box plot?
+
+[**24**](Application_Part3.md#stylizing-your-visualizations)
+Submit your Bar Chart.
+
+[**25**](Application_Part3.md#stylizing-your-visualizations)
+Submit your Box plot.
+
+
+
+<!-- # Lecture Content Questions 
 
 [**1**](Content_Part1.md)
 Which type of visualization would be *best suited* to look at a frequency distribution?
@@ -97,54 +150,4 @@ This type of colorblindness impacts ~ 4.5% of the human population.
 - Blue-Green
 - Red-Blue
 - Full Spectrum
-
----
-
-# Lab Application Questions 
-
-Unless otherwise specified, numeric answers have a margin of error of 0.01, so give all responses to at least the hundredths place.
-
-[**14**](Application_Part1.md#download-the-data)
-Simply Analytics allows you to download data about businesses locations. [T/F]
-
-[**15**](Application_Part1.md#pre-processing)
-Which projection did I choose for the feature dataset?  Why did I choose this projection?
-
-[**16**](Application_Part1.md#pre-processing)
-We used the clip tool to ensure we don't  ____ population density in the coastal Subdivisions.
-
-* Overestimate
-* Underestimate
-* Correctly Calculate
-
-[**17**](Application_Part2.md#a-revised-classification)
-What was the reasoning behind Stats Canada updating from the old Rural/Urban to the Population Centre and Rural Area classification method?
-
-[**18**](Application_Part2.md#applying-the-classification)
-The Select by ____ tool lets us use SQL (Structured Query Language) to define expressions for querying vector data.
-
-[**19**](Application_Part3.md#plotting-relationships)
-Box plots are most useful for looking at frequency distributions. [T/F]
-
-[**20**](Application_Part3.md#plotting-relationships)
-In which Population Centre and Rural Area class does the the largest proportion of BC's population live?
-
-- Large Urban Population Centre
-- Rural
-- Small Population Centre
-- Medium Population Centre
-
-[**21**](Application_Part3.md#plotting-relationships)
-What  percent  of BC's overall population lives in Rural Areas?  Round your answer to the nearest percent.  *Hint* Sum the four classes to get the total population.
-
-[**22**](Application_Part3.md#plotting-relationships)
-What is the median value for the percentage of income that people in Rural areas spend on food?  Round to the nearest tenth percent.
-
-[**23**](Application_Part3.md#benefits-of-data-classification)
-How does classifying the data help us reveal patterns compared to what we see in the scatter plot?  Does the r2 score indicate a relationship in the scatter plot?  What conclusions can you draw about the proportion of income spent on food by people in different regions from looking at the box plot?
-
-[**24**](Application_Part3.md#stylizing-your-visualizations)
-Submit your Bar Chart.
-
-[**25**](Application_Part3.md#stylizing-your-visualizations)
-Submit your Box plot.
+ -->
