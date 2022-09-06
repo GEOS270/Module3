@@ -81,7 +81,7 @@ What best describes the Population Center and Rural Area Classification attribut
 [**7**](Application_Part3.md#plotting-relationships)
 Box plots are most useful for looking at frequency distributions. [T/F]
 
-[**20**](Application_Part3.md#plotting-relationships)
+[**8**](Application_Part3.md#plotting-relationships)
 In which Population Centre and Rural Area class does the the largest proportion of BC's population live?
 
 - Large Urban Population Centre
@@ -89,19 +89,19 @@ In which Population Centre and Rural Area class does the the largest proportion 
 - Small Population Centre
 - Medium Population Centre
 
-[**21**](Application_Part3.md#plotting-relationships)
+[**9**](Application_Part3.md#plotting-relationships)
 What  percent  of BC's overall population lives in Rural Areas?  Round your answer to the nearest percent.  *Hint* Sum the four classes to get the total population.
 
-[**22**](Application_Part3.md#plotting-relationships)
+[**10**](Application_Part3.md#plotting-relationships)
 What is the median value for the percentage of income that people in Rural areas spend on food?  Round to the nearest tenth percent.
 
-[**23**](Application_Part3.md#benefits-of-data-classification)
+[**11**](Application_Part3.md#benefits-of-data-classification)
 How does classifying the data help us reveal patterns compared to what we see in the scatter plot?  Does the r2 score indicate a relationship in the scatter plot?  What conclusions can you draw about the proportion of income spent on food by people in different regions from looking at the box plot?
 
-[**24**](Application_Part3.md#stylizing-your-visualizations)
+[**12**](Application_Part3.md#stylizing-your-visualizations)
 Submit your Bar Chart.
 
-[**25**](Application_Part3.md#stylizing-your-visualizations)
+[**13**](Application_Part3.md#stylizing-your-visualizations)
 Submit your Box plot.
 
 

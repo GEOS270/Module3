@@ -1,0 +1,77 @@
+I"ÿ<h1 class="no_toc" id="data-classification">Data Classification</h1>
+
+<ol id="markdown-toc">
+  <li><a href="#defining-rural--urban-areas" id="markdown-toc-defining-rural--urban-areas">Defining Rural &amp; Urban Areas</a>    <ol>
+      <li><a href="#a-revised-classification" id="markdown-toc-a-revised-classification">A Revised Classification</a></li>
+    </ol>
+  </li>
+  <li><a href="#applying-the-classification" id="markdown-toc-applying-the-classification">Applying the Classification</a></li>
+</ol>
+
+<h1 id="defining-rural--urban-areas">Defining Rural &amp; Urban Areas</h1>
+
+<p>Until 2010, Statistics Canada used a Rural/Urban classification scheme to describe Census unit smaller than a Province/Territory:</p>
+
+<p><strong>Rural</strong>: a population density less than 400 people per square kilometer <strong>or</strong> a total population of less than 1,000 people.</p>
+
+<p><strong>Urban</strong>: a unit with a population density at least 400 people per square kilometer <strong>and</strong> a total population of at least 1,000 people.</p>
+
+<h2 id="a-revised-classification">A Revised Classification</h2>
+
+<p>Statistics Canada Now uses the <strong>Population Center and Rural Area Classification</strong>.  You can skim the <a href="https://www.statcan.gc.ca/eng/subjects/standard/pcrac/2016/introduction">Documentation</a> explaining the classification scheme to get a feel for the reasoning behind updating from the old Rural/Urban method?  The new classification scheme was updated to split the old <strong>Urban</strong> class into three different kinds of <strong>Population Centers</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Rural</strong></th>
+      <th><strong>Small Population Centers</strong></th>
+      <th><strong>Medium Population Center</strong></th>
+      <th><strong>Large Urban Population Center</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Same as old method</td>
+      <td>Not Rural <strong>and</strong><br />Population &lt; 30,000</td>
+      <td>Not Rural <strong>and</strong><br />Population &gt;= 30,000 <strong>and</strong><br />Population &lt; 100,000</td>
+      <td>Not Rural <strong>and</strong><br />Population &gt;= 100,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="applying-the-classification">Applying the Classification</h1>
+
+<p>Your task is to apply the <strong>Population Center and Rural Area Classification</strong> scheme (see table above).  You can watch the video below for reference, which shows you how to apply the old <strong>Urban/Rural</strong> scheme.</p>
+
+<h2 class="no_toc" id="note"><strong>Note</strong></h2>
+
+<ul>
+  <li>
+    <p>The video is from a slightly dated version of the lab, the steps are the same but some of the file names may look a bit different, and it was recorded using an older version of ArcGIS Pro.</p>
+  </li>
+  <li>
+    <p>You do not need to apply the old classification scheme, I use this example as a reference.  All your answers and uploads for the lab should be drawn from the <strong>New</strong> classification scheme.  The general steps for classifying the data are:</p>
+  </li>
+</ul>
+
+<p><strong class="label label-red">1</strong> Calculate population density.</p>
+
+<ul>
+  <li>You can refer to the exercise we did as part of <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html">Module 2</a> for help.</li>
+</ul>
+
+<p><strong class="label label-red">2</strong> Create a field and populate it using select by attribute, following the <strong>Population Center and Rural Area Classification</strong> scheme.</p>
+
+<ul>
+  <li>You can reference the table above for pointers on how to formulate your SQL statements.</li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uMLtpB6Xjqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<!-- ### QA3
+
+The Select by Attribute tool lets us use SQL (Structured Query Language) to define expressions for querying vector data. [T/F] -->
+
+:ET

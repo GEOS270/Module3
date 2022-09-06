@@ -24,7 +24,7 @@ Until 2010, Statistics Canada used a Rural/Urban classification scheme to descri
 
 Statistics Canada Now uses the **Population Center and Rural Area Classification**.  You can skim the [Documentation](https://www.statcan.gc.ca/eng/subjects/standard/pcrac/2016/introduction) explaining the classification scheme to get a feel for the reasoning behind updating from the old Rural/Urban method?  The new classification scheme was updated to split the old **Urban** class into three different kinds of **Population Centers**:
 
-|**Rural**         |**Small population centers**            |**Medium population centers**                                            |**Large urban population centers**        |
+|**Rural**         |**Small Population Centers**            |**Medium Population Center**                                            |**Large Urban Population Center**        |
 |------------------|----------------------------------------|-------------------------------------------------------------------------|------------------------------------------|
 |Same as old method|Not Rural **and**<br>Population < 30,000|Not Rural **and**<br>Population >= 30,000 **and**<br>Population < 100,000|Not Rural **and**<br>Population >= 100,000|
 
