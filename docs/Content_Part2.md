@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Classification
-parent: Data Classification and Visualization
+parent: Data Types, Classification, & Visualization
 # has_children: True
 nav_order: 2
 ---

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: What is Data?
-parent: Data Classification and Visualization
-has_children: True
+parent: Data Types, Classification, & Visualization
+# has_children: True
 nav_order: 1
 ---
 
