@@ -144,7 +144,7 @@ We have to do a few things to the data to make sure everything setup and ready s
 
 * Right click the SimplyAnalytics_Shapefiles and select > Rename
 
-<img src="content/images/Rename.png" style = "border:1px solid black; width:75%;">
+<img src="content/images/rename.png" style = "border:1px solid black; width:75%;">
 
 ## Rename the Variables
 

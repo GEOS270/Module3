@@ -38,8 +38,9 @@ Map/charts/figures will be evaluated for completeness and aesthetics.
 * Files should be saved as using the file type specified (.pdf, .png, etc.)
     * Make sure to double check the file before uploading!
 
+---
 
-# Lab Application Questions 
+# Quiz Questions
 
 Unless otherwise specified, numeric answers have a margin of error of 0.01, so give all responses to at least the hundredths place.
 
