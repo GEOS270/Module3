@@ -1,4 +1,4 @@
-I"ˇ<h1 class="no_toc" id="data-classification">Data Classification</h1>
+I"æ<h1 class="no_toc" id="data-classification">Data Classification</h1>
 
 <ol id="markdown-toc">
   <li><a href="#defining-rural--urban-areas" id="markdown-toc-defining-rural--urban-areas">Defining Rural &amp; Urban Areas</a>    <ol>
@@ -44,6 +44,22 @@
 <h1 id="applying-the-classification">Applying the Classification</h1>
 
 <p>Your task is to apply the <strong>Population Center and Rural Area Classification</strong> scheme (see table above).  You can watch the video below for reference, which shows you how to apply the old <strong>Urban/Rural</strong> scheme.</p>
+
+<ul>
+  <li>You are going to use the <strong>Select by Attribute</strong> function to help apply the classificiation.
+    <ul>
+      <li>Select by Attribute allows us to select rows/objects with a certain attribute.</li>
+      <li>It relies on something called a Structured Query Language (SQL).</li>
+    </ul>
+  </li>
+  <li>We are selecting all rows ‚ÄúWhere‚Äù our conditions are met.
+    <ul>
+      <li>You can use the <strong>And</strong>/<strong>Or</strong> commands to combine querries.</li>
+      <li><strong>And</strong>: Selects whre <strong>All</strong> statements are true</li>
+      <li><strong>Or</strong>: Selects whre <strong>Any</strong> statements are true</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 class="no_toc" id="note"><strong>Note</strong></h2>
 

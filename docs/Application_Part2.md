@@ -35,6 +35,14 @@ Statistics Canada Now uses the **Population Center and Rural Area Classification
 
 Your task is to apply the **Population Center and Rural Area Classification** scheme (see table above).  You can watch the video below for reference, which shows you how to apply the old **Urban/Rural** scheme. 
 
+* You are going to use the **Select by Attribute** function to help apply the classificiation.
+	* Select by Attribute allows us to select rows/objects with a certain attribute.
+	* It relies on something called a Structured Query Language (SQL).
+* We are selecting all rows "Where" our conditions are met.
+	* You can use the **And**/**Or** commands to combine querries.
+	* **And**: Selects whre **All** statements are true
+	* **Or**: Selects whre **Any** statements are true
+
 ## **Note**
 {: .no_toc }
 
@@ -51,6 +59,7 @@ Your task is to apply the **Population Center and Rural Area Classification** sc
 **2**{: .label .label-red } Create a field and populate it using select by attribute, following the **Population Center and Rural Area Classification** scheme.
 
 * You can reference the table above for pointers on how to formulate your SQL statements.
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uMLtpB6Xjqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.css">
+
+<!-- 
+    <link id="theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.2.0/dist/theme/white.css"> -->
+    <link id="theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/theme/serif.css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css"> -->
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/serif.css" id="theme"> -->
+  <!-- see: https://cdnjs.com/libraries/highlight.js/ -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/ir-black.min.css"> -->
+
+  <!-- Printing and PDF exports -->
+  <!-- <script>
+    // Load print, pdf stylesheets from jsDelivr
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script> -->
+
+
+  <!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <style>
+    body {
+      /* make it totally black */
+      /*background-color: black;*/
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .col {
+      flex: 1
+    }
+
+
+.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}
+
+
+ul {
+  padding-left: 5px;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+
+       <section>
+        <h1 style="font-size:320%">Data Classification</h1>
+        <div class="container" style="text-align:center;">
+          <p>Finding patterns in complex datasets, emphasize aspects we think are important.</p>
+      </section>
+
+
+     <section>
+      <h2>Descriptive Statistics</h2>
+        <div class="container">
+          <div class="left">
+            <p>When classifying data, descriptive statistics can be used to inform the choice of classification.
+              <ul>
+                <li>They are also frequently used <b>by</b> the classification methods.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="right" style="font-size:50%">
+            <table>
+              <tr>
+                  <td><b>Operation</b></td><td><b>Nominal</b></td><td><b>Ordinal</b></td><td><b>Interval</b></td><td><b>Ratio</b></td>
+              </tr>
+              <tr>
+                  <td>Equality</td><td>x</td><td>x</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Counts/Mode</td><td>x</td><td>x</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Rank/Order</td><td></td><td>x</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Median</td><td></td><td>~</td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Add/Subtract</td><td></td><td></td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Mean</td><td></td><td></td><td>x</td><td>x</td>
+              </tr>
+              <tr>
+                  <td>Multiply/Divide</td><td></td><td></td><td></td><td>x</td>
+              </tr>
+          </table>
+            
+          </div>
+        </div>
+    </section>
+
+     <section>
+      <h2>Central Tendency</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+            <p>Highlight the central feature in a dataset. 
+            <ul>
+              <li><b>Mode</b>: Most frequent value in a set</li>
+              <li><b>Median</b>: Middle value in a set
+                <ul>
+                  <li>Not impacted by outliers - median income</li>
+                </ul>
+                </li>
+              <li><b>Mean</b>: Sum divided by count
+                <ul>
+                  <li>Impacted by outliers - mean cost of food</li>
+                </ul>
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+     <section>
+      <h2>Measures of Dispersion</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+            <p>Give context to measures of central tendency. 
+            <ul>
+              <li><b>Range</b>: Difference between maximum and minimum</li>
+              <li><b>Interquartile Range</b>: Spread around the median
+                <ul>
+                  <li>Difference between 75th and 25th percentile value - not influenced by outliers</li>
+                </ul>
+                </li>
+              <li><b>Standard Deviation</b>: Measure of spread around the mean
+                <ul>
+                  <li>$\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^n x_i - U}$ - influenced by outliers</li>
+                </ul>
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+       <section>
+        <h2>Frequency Distribution</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Most useful for <b>categorical</b> data.
+          </p>
+          <ul>
+            <li>Counts per class</li>
+            <li>Bar charts are a useful way to visualize</li>
+          </ul>
+         </div>
+          <div class="col" style="text-align: right;">
+            <img src='images/Frequency_Dist.svg'>
+          </div>
+       </div>
+      </section>
+
+
+
+    <section>
+      <h2>Histograms</h2>
+      <div class="container">
+        <div class="col" style="text-align: left;">
+          <p>A useful tool to inspect numeric data
+            <ul>
+              <li>Orders data and bins by intervals</li>
+              <li>Helpful for classifying data</li>
+              <li>Outlier detection</li>
+                <ul>
+                  <li>Values separated by from the rest of the data</li>
+                </ul>
+            </ul></p>
+        </div>
+        <div class="col" style="text-align: right;">
+          <img src='images/histogram.png'>
+        </div>
+      </div>
+    </section>
+
+
+
+       <section>
+        <h2>Probability Distribution</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Probability of occurrence based on in a <b>quantitative</b> dataset.</p>
+          <ul>
+            <li><b>Normal Distribution</b>: idealized, based on distance from the mean in <b>standard deviations</b>.</li>
+            <ul>
+              <li>Assumed distribution in many statistical tests.</li>
+            </ul>
+          </ul>
+         </div>
+          <div class="col" style="text-align: center;">
+            <p> </p>
+            <img src='images/normal_dist.svg'>
+          </div>
+       </div>
+      </section>
+
+
+       <section>
+        <h2>Deviating from the Norm</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Data rarely fits a normal distribution perfectly:</p>
+            <ul>
+              <li><b>Skew</b>: deviates from a normal distribution</li>
+              <ul>
+                <li>Tails with outliers</li>
+              </ul>
+              <li><b>Kurtosis</b>: deviates from a normal distribution</li>
+              <ul>
+                <li>Dispersed or clustered</li>
+              </ul>
+              
+            </ul>
+          </ul>
+         </div>
+          <div class="col" style="text-align: center;">
+            <div class="r-stack">
+              <p class="fragment current-visible">Near Normal<img src='images/normal_dist.png'></p>
+              <p class="fragment current-visible">Skewed Normal<img src='images/normal_dist2.png'></p>
+              <p class="fragment current-visible">Highly Skewed<img src='images/normal_dist3.png'></p>
+           
+          </div>
+          </div>
+       </div>
+      </section>
+
+       <section>
+        <h2>Scaling Data</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Often helpful to scale or aggregate a value by a unit of another value - time, area, population etc.</p>
+            <ul>
+            <li>Example: <a href="https://health-infobase.canada.ca/covid-19/epidemiological-summary-covid-19-cases.html?stat=num&measure=total_last14&map=pt#a2" target="_blank">Canada COVID Portal</a></li>
+            <ul>
+            <li>Total cases aren't useful when comparing vastly different populations</li>
+            <li>Time rates (rolling 14 day averages) can be smooth out variability.</li>
+            </ul>
+          </ul>
+         </div>
+       </div>
+      </section>
+
+       <section>
+        <h2>Normalizing Data</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Allows us to account for confounding variables that mask or hide patterns in our data.</p>
+         </div>
+         <div class="col" style="text-align:center;">
+
+            <div class="r-stack">
+              <p class="fragment current-visible"><b>Highly correlated</b><img src='images/confounder_1.png'></p>
+              <p class="fragment current-visible"><b>No correlation</b><img src='images/confounder_2.png'></p>  
+          </div>
+         </div>
+       </div>
+      </section>
+
+
+       <section>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <h3>Multiple Factors</h3>
+          <p>It isn't always straightforward to include multiple confounding variables.  For example: COVID rates by age groups.</p>
+            <img src='images/horgan.jpg' width = "400">
+         </div>
+         <div class="col" style="text-align:center;">
+          <ol>
+            <li>Population by age group</li>
+            <li>Workforce participation</li>
+            <li>Occupational exposure</li>
+          </ol>
+            <img src='images/multiple_confounders.png' width = "350">
+         </div>
+       </div>
+      </section>
+
+
+       <section>
+          <h2>Standardizing</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+          <p>Can also allow us to compare between <b>two or more</b> variables in different units / scales.</p>
+          <ul>
+            <li>$z = \frac{x-\overline{U}}{\sigma}$</li>
+          </ul>
+         </div>
+         <div class="col" style="text-align:center;">
+            <img src='images/Standardizing.png'>
+         </div>
+       </div>
+      </section>
+
+       <section>
+        <h2>Classification Methods</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+            <p><b>Unsupervised</b>:
+            <ul>
+              <li>Data defined classes - the user decides on the number of classes</li>
+              <li>The rest is left of up to an algorithm</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col" style="text-align: left;">
+          <p><b>Supervised</b>: 
+          <ul>
+            <li>User defined - the user explicitly defines classes</li>
+            <li>Or provides set of classes as training data</li>
+            <li>Degree of user input is variable, more than unsupervised</li>
+          </ul>
+          </p>
+          </div>
+         </div>
+      </section>
+
+
+       <section>
+        <h2>Common Examples in Arc Pro</h2>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+            <p>Vancouver dissemination area populations</p>
+            <ul>
+              <li>Not classified</li>
+              <li>Color scheme is stretched between min/max</li>
+              <li>Difficult to see patterns</li>
+            </ul>
+        </div>
+        <div>
+          <img src="images/Unclassified.png" width="800">
+        </div>
+        </div>
+      </section>
+
+       <section>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+          <p>One of the simplest classification schemes.</p>
+          <ul>
+            <li>Data is split to bins of equal width based on the range.</li>
+            <li><b>Unsupervised</b>: user defines number of bins.</li>
+          </ul>
+         </div>
+        <div>
+        <h2>Equal Interval</h2>
+          <img src="images/Equal_Int.png" width="800">
+        </div>
+      </section>
+
+
+       <section>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+          <p>Another of the simplest classification schemes.</p>
+          <ul>
+            <li>Data is split to bins of equal width based on the range.</li>
+            <li><b>Unsupervised</b>: user defines bin width.</li>
+          </ul>
+         </div>
+        <div>
+        <h2>Defined Interval</h2>
+          <img src="images/Defined.png" width="800">
+        </div>
+      </section>
+
+
+       <section>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+          <p>Slightly more complex classification scheme.</p>
+          <ul>
+            <li>Data is split into bins by percentiles.</li>
+            <ul>
+              <li style="font-size:90%">e.g. 0-20%, 20-40%, ... 80-100%.</li>
+            </ul>
+            <li><b>Unsupervised</b>: user defines number of bins.</li>
+          </ul>
+         </div>
+        <div>
+        <h2>Quantiles</h2>
+          <img src="images/Quantile.png" width="800">
+        </div>
+      </section>
+
+
+       <section>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+          <p>More complex, data is split using the <a href="http://wiki.gis.com/wiki/index.php/Jenks_Natural_Breaks_Classification">Jenks algorithm</a>.</p>
+          <ul>
+            <li>Optimizes splits, by maximizing within group similarity and between group dissimilarity.</li>
+            <ul>
+              <li>"Natural" classes.</li>
+            </ul>
+            <li><b>Unsupervised</b>: user defines number of bins.</li>
+          </ul>
+         </div>
+        <div>
+        <h2>Natural Breaks</h2>
+          <img src="images/Natural_break.png" width="800">
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+            <p><br></p>
+          <p>Informative to "experts", not accessible for all.</p>
+          <ul>
+            <li>Distance from the mean in standard deviations.</li>
+            <ul>
+              <li>Unit-less, converts to interval data.</li>
+              <li>Diverging color maps.</li>
+            </ul>
+            <li><b>Unsupervised</b>: user defines number of bins.</li>
+          </ul>
+         </div>
+        <div>
+        <h2>Standard Deviation</h2>
+          <img src="images/Standard_dev.png" width="800">
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="right" style="text-align: Left;">
+          <p><b>Supervised</b>: User defines break values.</p>
+          <ul>
+            <li>Allows us to choose more meaningful break values if necessary.</li>
+            <li>Incorporate multiple factors</li>
+            <li>Influence the way the data is perceived.</li>
+          </ul>
+         </div>
+        <div>
+        <h2>Manual Breaks</h2>
+          <img src="images/Manual.png" width="800">
+        </div>
+      </div>
+      </section>
+
+
+       <section>
+        <h2>More Complex Methods</h2>
+        <div class="container">
+          <div class="col" style="text-align: Left;">
+            <p>There are many classification methods that are a bit too complex to actually perform in this course.
+            <ul>
+              <li>I'm introducing some because important to be aware of them.</li>
+              <li>You'll encounter them if you continue with GIS.</li>
+            </ul>
+            </p>
+        </div>
+        </div>
+      </section>
+
+
+       <section>
+        <h2>K-means</h2>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+            <p>Algorithm uses random steps to group data into clusters.
+            <ul>
+            <li><b>Unsupervised</b>: user defines number of bins & iterations.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="right">
+            <img src="images/kmeans.gif">
+        </div>
+
+        </div>
+      </section>
+
+
+       <section>
+        <h2>Median Absolute Deviation</h2>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+            <p>Used for automated detection of outliers.
+            <ul>
+            <li><b>Unsupervised</b>: user defines error threshold.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+          <img src="images/MAD.jpg">
+        </div>
+        </div>
+      </section>
+
+
+       <section>
+        <h2>Median Absolute Deviation</h2>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+            <p>Used for automated detection of outliers.
+            <ul>
+            <li><b>Unsupervised</b>: user defines error threshold.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+          <img src="images/MAD.jpg">
+        </div>
+        </div>
+      </section>
+
+
+       <section>
+        <h2>Decision Trees</h2>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+            <p>Fit training data to user defined categories.
+            <ul>
+            <li><b>Supervised</b>: user provides training classes.</li>
+            <li><i>Automated</i>: algorithm determines break values.</li>
+            <li>Risk of over-fitting</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+          <img src='images/tree.png'>
+        </div>
+        </div>
+      </section>
+
+
+       <section>
+        <h2>Random Forests</h2>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+            <p>Multiple trees (>100) can be averaged to increase performance and generalization.
+            <ul>
+            <li><b>Supervised</b>: user provides training classes and "hyperparameters".</li>
+            <li><i>Automated</i>: algorithm determines break values.</li>
+            <li>Low risk of over-fitting</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+          <img src='images/forest.gif'>
+        </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+          <h2>Landscape Classification</h2>
+            <p>
+            <ul>
+            <li><b>Training classes</b>: different ecosystems.</li>
+            <li><i>Training data</i>: time series of peak NDVI.</li>
+            <li>Random forest (100 trees)</li>
+            <ul>
+              <li>96% validation accuracy!</li>
+            </ul>
+            </ul>
+            </p>
+        </div>
+
+              <div class="r-stack" style="text-align: center;">
+              <p class="fragment current-visible"><img src='images/FishIsland_NDVI2.gif'></p>
+              <p class="fragment current-visible"><img src='images/LCM.png'></p>
+           
+          </div>
+
+        </div>
+      </section>
+
+
+
+       <section>
+        <h2>Neural Networks</h2>
+        <div class="container">
+          <div class="left" style="text-align: Left;">
+            <p>One of the most complex methods, capable of predictions.
+            <ul>
+            <li><b>Supervised</b>: user provides training classes and "hyperparameters".</li>
+            <li><i>Automated</i>: algorithm maps relationships in dataset.</li>
+            <li>Risk of over-fitting</li>
+            <ul>
+              <li>Requires careful inspection</li>
+            </ul>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+          <img src='images/NN.gif'>
+        </div>
+        </div>
+      </section>
+
+    </div><!-- .slides -->
+
+  </div><!-- .reveal -->
+
+  <!-- not needed since 3.8.0 -->
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/head.min.js"><script -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/reveal.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/math/math.min.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+      margin: 0.04,
+      width: 1200,
+
+
+      transition: 'none',
+
+    plugins: [ RevealMath.MathJax2 ]
+    },
+
+
+    );
+  </script>
+</body>
+
+</html>
+
+<!-- 
+
+        // plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      // plugins: [ RevealMath.MathJax2 ], // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins, loaded from jsDelivr
+      // dependencies: [
+      //   { src: srcUrlPrefix + 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+      //   { src: srcUrlPrefix + 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+      //   { src: srcUrlPrefix + 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+      //   { src: srcUrlPrefix + 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+      //   { src: srcUrlPrefix + 'plugin/zoom-js/zoom.js', async: true },
+      //   { src: srcUrlPrefix + 'plugin/notes/notes.js', async: true },
+      //   { src: srcUrlPrefix + '/plugin/math/math.js', async: true }
+      // ] -->
