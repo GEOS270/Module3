@@ -300,7 +300,9 @@ ol ol li.nl::before {
               <li>Bar charts are a useful tool for visualizing frequency distributions</li>
             </ul>
         </div>
-        <div class="right" style="text-align: right;">
+        <div class="right">
+          
+          <span class="helper"></span>
           <img src='images/Frequency_Dist.svg' style = "border:2px solid #555"></img>
         </div>
       </div>
@@ -318,7 +320,7 @@ ol ol li.nl::before {
               </ul>
             </ul>
         </div>
-        <div class="right" style="text-align: right;">
+        <div class="right">
           <img src='images/normal_dist.svg' style = "border:2px solid #555"></img>
           <table>
             <tr><td>&plusmn;1 $\sigma$</td><td>68% of observations</td></tr>
@@ -345,7 +347,8 @@ ol ol li.nl::before {
               <li>Similar to bar charts, <b>but</b> not the same thing!</li>
             </ul>
         </div>
-        <div class="right" style="text-align: right;">
+        <div class="right">
+          <span class="helper"></span>
           <img src='images/histogram.png' style = "border:2px solid #555"></img>
         </div>
      </div>
@@ -383,6 +386,21 @@ ol ol li.nl::before {
           </div>
         </div>
      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1 class="title">TopHat Question 1</h1>
+          <div class="question">
+            <p>If you are working with nominal or ordinal data, and you want see how many observations you have for each category, you would use:</p>
+            <ul>
+              <li>A histogram to plot a probability distribution</li>
+              <li>A histogram to plot a frequency distribution</li>
+              <li>A bar chart to plot a probability distribution</li>
+              <li>A bar chart to plot a frequency distribution</li>
+            </ul>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -431,6 +449,348 @@ ol ol li.nl::before {
           </ol>
         </div>
      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Standardizing</h2>
+          <div class="left">
+            <p>Also allow us to compare between <b>two or more</b> variables in different units / scales.</p>
+            <ul>
+              <li>$z = \frac{x-\overline{U}}{\sigma}$</li>
+              <li>Similar idea to normalizing, but:</li>
+              <ul>
+                <li>Removing the mean and standard deviation from multiple variables</li>
+              </ul>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src='images/Standardizing.png' style = "border:2px solid #555">
+          </ol>
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1 class="title">TopHat Question 2</h1>
+          <div class="question">
+            <p>Which of these countries has the highest population density? * <i>Populations and Areas are approximate, given to two significant figures for convenience.</i></p>
+            <ul>
+              <li><b>Monaco</b>: Pop (37,000), Area (2 km<sup>2</sup>)</li>
+              <li><b>Singapore</b>: Pop (5,500,000), Area (720 km<sup>2</sup>)</li>
+              <li><b>China</b>: Pop (1,400,000,000), Area (9,600,000 km<sup>2</sup>)</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h2 class="header">Classification Methods</h2>
+          <div class="left">
+            <p><b>Unsupervised:</b></p>
+            <ul>
+              <li>Data defined classes - the user decides on the number of classes</li>
+              <li>The rest is left of up to an algorithm</li>
+            </ul>
+        </div>
+        <div class="right">
+          <p><b>Supervised:</b></p>
+          <ul>            
+            <li>User defined - the user explicitly defines classes</li>
+            <li>Or provides set of classes as training data</li>
+            <li>Degree of user input is variable, more than unsupervised</li>
+          </ul>
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Common Examples in Arc Pro</h2>
+          <div class="left">
+            <p>Vancouver dissemination area populations</p>
+            <ul>
+              <li>Not classified</li>
+              <li>Color scheme is stretched between min/max</li>
+              <li>Difficult to see patterns</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Unclassified.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Equal Interval</h2>
+          <div class="left">
+            <p>One of the simplest classification schemes.</p>
+            <ul>
+              <li>Data is split to classes of equal width based on the range.</li>
+              <li><b>Unsupervised</b>: user defines number of bins.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Equal_Int.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h2 class="header">Defined Interval</h2>
+          <div class="left">
+            <p>Another of the simplest classification schemes.</p>
+            <ul>
+              <li>Data is split to classes of equal width based on the range.</li>
+              <li><b>Unsupervised</b>: user defines bin width.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Defined.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Quantiles</h2>
+          <div class="left">
+            <p>Slightly more complex classification scheme.</p>
+            <ul>
+              <li>Data is split into classes by percentiles.</li>
+              <ul>
+                <li style="font-size:90%">e.g. 0-20%, 20-40%, ... 80-100%.</li>
+              </ul>
+              <li><b>Unsupervised</b>: user defines number of bins.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Quantile.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Natural Breaks</h2>
+          <div class="left">
+            <p>More complex, data is split using the <a href="http://wiki.gis.com/wiki/index.php/Jenks_Natural_Breaks_Classification">Jenks algorithm</a>.</p>
+            <ul>
+              <li>Optimizes splits, by maximizing within group similarity and between group dissimilarity.</li>
+              <ul>
+                <li>"Natural" classes.</li>
+              </ul>
+              <li><b>Unsupervised</b>: user defines number of bins.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Natural_break.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h2 class="header">Natural Breaks</h2>
+          <div class="left">
+            <p>Informative to "experts", but not accessible for all.</p>
+            <ul>
+              <li>Classes based on "distance" from the mean in standard deviations.</li>
+              <ul>
+                <li>Unit-less, converts to interval data.</li>
+                <li>Diverging color maps.</li>
+              </ul>
+              <li><b>Unsupervised</b>: user defines number of bins.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Standard_dev.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <h2 class="header">Manual Breaks</h2>
+          <div class="left">
+            <p><b>Supervised</b>: User defines break values.</p>
+            <ul>
+              <li>Allows us to choose more meaningful break values if necessary.</li>
+              <li>Incorporate multiple factors</li>
+              <li>Influence the way the data is perceived.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/Natural_break.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1 class="title">TopHat Question 3</h1>
+          <div class="question">
+            <p>This classification method seeks to maximize the similarity between data values within groups and maximize the dissimilarity in data values between groups.  It tries to find the "optimal" splits within a dataset.</p>
+            <ul>
+              <li>Manual Breaks</li>
+              <li>Quantiles</li>
+              <li>Natural Breaks</li>
+              <li>Equal Interval</li>
+              <li>Standard Deviation</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">More Complex Methods</h2>
+          <div class="full">
+            <p>There are many classification methods that are a bit too complex to actually perform in this course.</p>
+            <ul>
+              <li>I'm introducing some because important to be aware of them.</li>
+              <li>You'll encounter them if you continue with GIS.</li>
+            </ul>
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">K-means</h2>
+          <div class="left">
+            <p>Algorithm uses random steps to group data into clusters.</p>
+            <ul>
+              <li><b>Unsupervised</b>: user defines number of bins & iterations.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/kmeans.gif" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Median Absolute Deviation</h2>
+          <div class="left">
+            <p>Used for automated detection of outliers.</p>
+            <ul>
+              <li><b>Unsupervised</b>: user defines error threshold.</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/MAD.jpg" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Decision Trees</h2>
+          <div class="left">
+            <p>Fit training data to user defined categories.</p>
+            <ul>
+              <li><b>Supervised</b>: user provides training classes.</li>
+              <li><i>Automated</i>: algorithm determines break values.</li>
+              <li>Risk of over-fitting</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/tree.png" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Random Forests</h2>
+          <div class="left">
+            <p>Multiple trees (>100) can be averaged to increase performance and generalization.</p>
+            <ul>
+              <li><b>Supervised</b>: user provides training classes and "hyperparameters".</li>
+              <li><i>Automated</i>: algorithm determines break values.</li>
+              <li>Low risk of over-fitting</li>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/forest.gif" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Landscape Classification</h2>
+          <div class="left">
+            <p>Multiple trees (>100) can be averaged to increase performance and generalization.</p>
+            <ul>
+              <li><b>Supervised</b>: user provides training classes and "hyperparameters".</li>
+              <li><i>Automated</i>: algorithm determines break values.</li>
+              <li>Low risk of over-fitting</li>
+            </ul>
+        </div>
+        <div class="r-stack">
+          <div class="right fragment fade-out" data-fragment-index="0">
+            <span class="helper"></span>
+            <img src="images/FishIsland_NDVI2.gif" width="100%" style="border: 2px solid #555">
+          </div>
+          <div class="right fragment current-visible" data-fragment-index="0">
+            <span class="helper"></span>
+            <img src="images/FishIsland_NDVI2.gif" width="100%" style="border: 2px solid #555">
+          </div>
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="header">Neural Networks</h2>
+          <div class="left">
+            <p>One of the most complex methods.</p>
+            <ul>
+              <li><b>Supervised</b>: user provides training classes and "hyperparameters".</li>
+              <li><i>Automated</i>: algorithm maps relationships in dataset.</li>
+              <li>Risk of over-fitting</li>
+              <ul>
+                <li>Requires careful inspection</li>
+              </ul>
+            </ul>
+        </div>
+        <div class="right">
+          <span class="helper"></span>
+          <img src="images/NN.gif" width="100%" style="border: 2px solid #555">
+        </div>
+     </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h1 class="title">TopHat Question 4</h1>
+          <div class="question">
+            <p>Unsupervised classification methods typically require more user input than supervised classification methods.</p>
+            <ul>
+              <li>True</li>
+              <li>False</li>
+            </ul>
+        </div>
+      </div>
     </section>
 
     </div><!-- .slides -->
