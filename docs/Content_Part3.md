@@ -6,15 +6,6 @@ parent: Data Types, Classification, & Visualization
 nav_order: 3
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 # Data Visualization
 
 It is important to display your results in an clean, transparent, and accessible way.

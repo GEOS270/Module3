@@ -37,7 +37,7 @@
   },"6": {
     "doc": "What is Data?",
     "title": "What is Data?",
-    "content": "# What is Data? Before we think about how we represent data in a GIS specifically, we need to take a step back and think about what data is? Your browser does not support iframes. View Slides in New Tab * Data is information describing some phenomenon. * The **type of phenomenon** being represented will often influence *how* we represent it. * There are different types of data too. Some is numeric, some is purely descriptive. Different types of data have different rules we must consider when working with them. * Spatial data is special! There are unique considerations we need to make. ",
+    "content": "# What is Data? Before we think about how we represent data in a GIS specifically, we need to take a step back and think about what data is? Your browser does not support iframes. View Slides in New Tab ",
     "url": "/docs/Content_Part1.html",
     "relUrl": "/docs/Content_Part1.html"
   },"7": {
@@ -49,7 +49,7 @@
   },"8": {
     "doc": "Data Visualization",
     "title": "Data Visualization",
-    "content": "{: .text-delta } 1. TOC {:toc} # Data Visualization It is important to display your results in an clean, transparent, and accessible way. Your browser does not support iframes. View Slides in New Tab ",
+    "content": "# Data Visualization It is important to display your results in an clean, transparent, and accessible way. Your browser does not support iframes. View Slides in New Tab ",
     "url": "/docs/Content_Part3.html",
     "relUrl": "/docs/Content_Part3.html"
   },"9": {
